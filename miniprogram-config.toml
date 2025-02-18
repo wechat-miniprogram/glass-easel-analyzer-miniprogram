@@ -1,5 +1,3 @@
-element = []
-
 [[component]]
 tag-name = "ad"
 description = "Banner 广告。"
