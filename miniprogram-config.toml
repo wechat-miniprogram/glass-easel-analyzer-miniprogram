@@ -252,7 +252,7 @@ deprecated = false
 [[component.property]]
 name = "form-type"
 ty = "string"
-description = "用于 [form]((form)) 组件，点击分别会触发 [form]((form)) 组件的 submit/reset 事件"
+description = "用于 [form](https://developers.weixin.qq.com/miniprogram/dev/component/form.html) 组件，点击分别会触发 [form](https://developers.weixin.qq.com/miniprogram/dev/component/form.html) 组件的 submit/reset 事件"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/button.html"
 deprecated = false
 
@@ -440,7 +440,7 @@ deprecated = false
 
 [[component.event]]
 name = "getuserinfo"
-description = '用户点击该按钮时，会返回获取到的用户信息，回调的detail数据与[wx.getUserInfo]((wx.getUserInfo))返回的一致，open-type="getUserInfo"时有效'
+description = '用户点击该按钮时，会返回获取到的用户信息，回调的detail数据与[wx.getUserInfo](https://developers.weixin.qq.com/miniprogram/dev/api/open-api/user-info/wx.getUserInfo.html)返回的一致，open-type="getUserInfo"时有效'
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/button.html"
 deprecated = false
 
@@ -501,8 +501,8 @@ deprecated = false
 [[component]]
 tag-name = "camera"
 description = """
-系统相机。扫码二维码功能，需升级微信客户端至6.7.3。需要[用户授权]((open-ability/authorize)) `scope.camera`。
-{%version('2.10.0')%}起 initdone 事件返回 maxZoom，最大变焦范围，相关接口 [CameraContext.setZoom]((CameraContext.setZoom))。"""
+系统相机。扫码二维码功能，需升级微信客户端至6.7.3。需要[用户授权](https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/authorize.html) `scope.camera`。
+[2.10.0](https://developers.weixin.qq.com/miniprogram/analysis/experience/compatibility.html)起 initdone 事件返回 maxZoom，最大变焦范围，相关接口 [CameraContext.setZoom](https://developers.weixin.qq.com/miniprogram/dev/api/media/camera/CameraContext.setZoom.html)。"""
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/camera.html"
 deprecated = false
 
@@ -637,7 +637,7 @@ deprecated = false
 
 [[component]]
 tag-name = "canvas"
-description = "画布。2.9.0 起支持一套新 Canvas 2D 接口（需指定 type 属性），同时支持[同层渲染]((native-component#原生组件同层渲染))，原有接口不再维护。旧版本可参考 [旧版画布迁移指南]((ability/canvas-legacy-migration)) 进行迁移。"
+description = "画布。2.9.0 起支持一套新 Canvas 2D 接口（需指定 type 属性），同时支持[同层渲染](https://developers.weixin.qq.com/miniprogram/dev/component/native-component.html#原生组件同层渲染)，原有接口不再维护。旧版本可参考 [旧版画布迁移指南](https://developers.weixin.qq.com/miniprogram/dev/framework/ability/canvas-legacy-migration.html) 进行迁移。"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/canvas.html"
 deprecated = false
 
@@ -820,7 +820,7 @@ deprecated = false
 [[component.property]]
 name = "value"
 ty = "string"
-description = "[checkbox]((checkbox))标识，选中时触发[checkbox-group]((checkbox-group))的 change 事件，并携带 [checkbox]((checkbox)) 的 value"
+description = "[checkbox](https://developers.weixin.qq.com/miniprogram/dev/component/checkbox.html)标识，选中时触发[checkbox-group](https://developers.weixin.qq.com/miniprogram/dev/component/checkbox-group.html)的 change 事件，并携带 [checkbox](https://developers.weixin.qq.com/miniprogram/dev/component/checkbox.html) 的 value"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/checkbox.html"
 value-option = []
 deprecated = false
@@ -851,14 +851,14 @@ deprecated = false
 
 [[component]]
 tag-name = "checkbox-group"
-description = "多项选择器，内部由多个[checkbox]((checkbox))组成。"
+description = "多项选择器，内部由多个[checkbox](https://developers.weixin.qq.com/miniprogram/dev/component/checkbox.html)组成。"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/checkbox-group.html"
 property = []
 deprecated = false
 
 [[component.event]]
 name = "change"
-description = "[checkbox-group]((checkbox-group))中选中项发生改变时触发 change 事件，detail = {value:[选中的checkbox的value的数组]}"
+description = "[checkbox-group](https://developers.weixin.qq.com/miniprogram/dev/component/checkbox-group.html)中选中项发生改变时触发 change 事件，detail = {value:[选中的checkbox的value的数组]}"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/checkbox-group.html"
 deprecated = false
 
@@ -867,7 +867,7 @@ tag-name = "cover-image"
 description = """
 覆盖在原生组件之上的图片视图。
 
-可覆盖的原生组件同[cover-view]((cover-view))，支持嵌套在[cover-view]((cover-view))里。"""
+可覆盖的原生组件同[cover-view](https://developers.weixin.qq.com/miniprogram/dev/component/cover-view.html)，支持嵌套在[cover-view](https://developers.weixin.qq.com/miniprogram/dev/component/cover-view.html)里。"""
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/cover-image.html"
 deprecated = false
 
@@ -913,9 +913,9 @@ tag-name = "cover-view"
 description = """
 覆盖在原生组件之上的文本视图。
 
-可覆盖的原生组件包括 [map]((map))、[video]((video))、[canvas]((canvas))、[camera]((camera))、[live-player]((live-player))、[live-pusher]((live-pusher))
+可覆盖的原生组件包括 [map](https://developers.weixin.qq.com/miniprogram/dev/component/map.html)、[video](https://developers.weixin.qq.com/miniprogram/dev/component/video.html)、[canvas](https://developers.weixin.qq.com/miniprogram/dev/component/canvas.html)、[camera](https://developers.weixin.qq.com/miniprogram/dev/component/camera.html)、[live-player](https://developers.weixin.qq.com/miniprogram/dev/component/live-player.html)、[live-pusher](https://developers.weixin.qq.com/miniprogram/dev/component/live-pusher.html)
 
-只支持嵌套 [cover-view]((cover-view))、[cover-image]((cover-image))，可在 [cover-view]((cover-view)) 中使用 [button]((button))。组件属性的长度单位默认为px，{%version('2.4.0')%}起支持传入单位(rpx/px)。"""
+只支持嵌套 [cover-view](https://developers.weixin.qq.com/miniprogram/dev/component/cover-view.html)、[cover-image](https://developers.weixin.qq.com/miniprogram/dev/component/cover-image.html)，可在 [cover-view](https://developers.weixin.qq.com/miniprogram/dev/component/cover-view.html) 中使用 [button](https://developers.weixin.qq.com/miniprogram/dev/component/button.html)。组件属性的长度单位默认为px，[2.4.0](https://developers.weixin.qq.com/miniprogram/analysis/experience/compatibility.html)起支持传入单位(rpx/px)。"""
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/cover-view.html"
 event = []
 deprecated = false
@@ -930,7 +930,7 @@ deprecated = false
 
 [[component]]
 tag-name = "draggable-sheet"
-description = "半屏可拖拽组件。该组件需配合 [DraggableSheetContext]((DraggableSheetContext)) 接口使用。 目前仅在 Skyline 渲染引擎下支持。"
+description = "半屏可拖拽组件。该组件需配合 [DraggableSheetContext](https://developers.weixin.qq.com/miniprogram/dev/api/skyline/DraggableSheetContext.html) 接口使用。 目前仅在 Skyline 渲染引擎下支持。"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/draggable-sheet.html"
 event = []
 deprecated = false
@@ -993,18 +993,18 @@ deprecated = false
 
 [[component]]
 tag-name = "editor"
-description = '''
+description = """
 富文本编辑器，可以对图片、文字进行编辑。
 
 编辑器导出内容支持带标签的 `html`和纯文本的 `text`，编辑器内部采用 `delta` 格式进行存储。
 
 通过`setContents`接口设置内容时，解析插入的 `html` 可能会由于一些非法标签导致解析错误，建议开发者在小程序内使用时通过 delta 进行插入。
 
-富文本组件内部引入了一些基本的样式使得内容可以正确的展示，开发时可以进行覆盖。需要注意的是，在其它组件或环境中使用富文本组件导出的html时，需要额外引入 <a :href="require('../resource/editor.zip')">这段样式</a>，并维护`<ql-container><ql-editor></ql-editor></ql-container>`的结构。
+富文本组件内部引入了一些基本的样式使得内容可以正确的展示，开发时可以进行覆盖。需要注意的是，在其它组件或环境中使用富文本组件导出的html时，需要额外引入 [这段样式](https://developers.weixin.qq.com/miniprogram/dev/component/editor.html)，并维护`<ql-container><ql-editor></ql-editor></ql-container>`的结构。
 
 图片控件仅初始化时设置有效。
 
-相关 api：[EditorContext]((EditorContext))'''
+相关 api：[EditorContext](https://developers.weixin.qq.com/miniprogram/dev/api/media/editor/EditorContext.html)"""
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/editor.html"
 deprecated = false
 
@@ -1089,16 +1089,16 @@ deprecated = false
 [[component]]
 tag-name = "form"
 description = """
-表单。将组件内的用户输入的[switch]((switch)) [input]((input)) [checkbox]((checkbox)) [slider]((slider)) [radio]((radio)) [picker]((picker)) 提交。
+表单。将组件内的用户输入的[switch](https://developers.weixin.qq.com/miniprogram/dev/component/switch.html) [input](https://developers.weixin.qq.com/miniprogram/dev/component/input.html) [checkbox](https://developers.weixin.qq.com/miniprogram/dev/component/checkbox.html) [slider](https://developers.weixin.qq.com/miniprogram/dev/component/slider.html) [radio](https://developers.weixin.qq.com/miniprogram/dev/component/radio.html) [picker](https://developers.weixin.qq.com/miniprogram/dev/component/picker.html) 提交。
 
-当点击 [form]((form)) 表单中 form-type 为 submit 的 [button]((button)) 组件时，会将表单组件中的 value 值进行提交，需要在表单组件中加上 name 来作为 key。"""
+当点击 [form](https://developers.weixin.qq.com/miniprogram/dev/component/form.html) 表单中 form-type 为 submit 的 [button](https://developers.weixin.qq.com/miniprogram/dev/component/button.html) 组件时，会将表单组件中的 value 值进行提交，需要在表单组件中加上 name 来作为 key。"""
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/form.html"
 deprecated = false
 
 [[component.property]]
 name = "report-submit"
 ty = "boolean"
-description = "是否返回 formId 用于发送[模板消息]((open-ability/template-message))"
+description = "是否返回 formId 用于发送[模板消息](https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/template-message.html)"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/form.html"
 value-option = []
 deprecated = false
@@ -1211,7 +1211,7 @@ deprecated = false
 
 [[component]]
 tag-name = "grid-builder"
-description = '网格构造器，仅支持作为 `<scroll-view type="custom">` 模式的直接子节点。具体用法可参考 [scroll-view]((scroll-view#列表构造器使用方法))'
+description = '网格构造器，仅支持作为 `<scroll-view type="custom">` 模式的直接子节点。具体用法可参考 [scroll-view](https://developers.weixin.qq.com/miniprogram/dev/component/scroll-view.html#列表构造器使用方法)'
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/grid-builder.html"
 deprecated = false
 
@@ -1382,7 +1382,7 @@ deprecated = false
 [[component.property]]
 name = "size"
 ty = "string"
-description = "icon的大小，单位默认为px，{%version('2.4.0')%}起支持传入单位(rpx/px)，{%version('2.21.3')%}起支持传入其余单位(rem 等)。"
+description = "icon的大小，单位默认为px，[2.4.0](https://developers.weixin.qq.com/miniprogram/analysis/experience/compatibility.html)起支持传入单位(rpx/px)，[2.21.3](https://developers.weixin.qq.com/miniprogram/analysis/experience/compatibility.html)起支持传入其余单位(rem 等)。"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/icon.html"
 value-option = []
 deprecated = false
@@ -1397,7 +1397,7 @@ deprecated = false
 
 [[component]]
 tag-name = "image"
-description = "图片。支持 JPG、PNG、SVG、WEBP、GIF 等格式，{%version('2.3.0')%} 起支持云文件ID。"
+description = "图片。支持 JPG、PNG、SVG、WEBP、GIF 等格式，[2.3.0](https://developers.weixin.qq.com/miniprogram/analysis/experience/compatibility.html) 起支持云文件ID。"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/image.html"
 deprecated = false
 
@@ -1508,7 +1508,7 @@ deprecated = false
 
 [[component]]
 tag-name = "input"
-description = "输入框。该组件是[原生组件]((native-component))，使用时请注意相关限制"
+description = "输入框。该组件是[原生组件](https://developers.weixin.qq.com/miniprogram/dev/component/native-component.html)，使用时请注意相关限制"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/input.html"
 deprecated = false
 
@@ -1821,7 +1821,7 @@ description = """
 
 使用for属性找到对应的id，或者将控件放在该标签下，当点击时，就会触发对应的控件。
 for优先级高于内部控件，内部有多个控件的时候默认触发第一个控件。
-目前可以绑定的控件有：[button]((button)), [checkbox]((checkbox)), [radio]((radio)), [switch]((switch)), [input]((input))。"""
+目前可以绑定的控件有：[button](https://developers.weixin.qq.com/miniprogram/dev/component/button.html), [checkbox](https://developers.weixin.qq.com/miniprogram/dev/component/checkbox.html), [radio](https://developers.weixin.qq.com/miniprogram/dev/component/radio.html), [switch](https://developers.weixin.qq.com/miniprogram/dev/component/switch.html), [input](https://developers.weixin.qq.com/miniprogram/dev/component/input.html)。"""
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/label.html"
 event = []
 deprecated = false
@@ -1836,7 +1836,7 @@ deprecated = false
 
 [[component]]
 tag-name = "list-builder"
-description = '列表构造器，仅支持作为 `<scroll-view type="custom">` 模式的直接子节点。具体用法可参考 [scroll-view]((scroll-view#列表构造器使用方法))'
+description = '列表构造器，仅支持作为 `<scroll-view type="custom">` 模式的直接子节点。具体用法可参考 [scroll-view](https://developers.weixin.qq.com/miniprogram/dev/component/scroll-view.html#列表构造器使用方法)'
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/list-builder.html"
 deprecated = false
 
@@ -1903,7 +1903,7 @@ deprecated = false
 
 [[component]]
 tag-name = "list-view"
-description = '列表布局容器，仅支持作为 `<scroll-view type="custom">` 模式的直接子节点或 [sticky-section]((sticky-section)) 组件直接子节点'
+description = '列表布局容器，仅支持作为 `<scroll-view type="custom">` 模式的直接子节点或 [sticky-section](https://developers.weixin.qq.com/miniprogram/dev/component/sticky-section.html) 组件直接子节点'
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/list-view.html"
 event = []
 deprecated = false
@@ -1919,7 +1919,7 @@ deprecated = false
 [[component]]
 tag-name = "live-player"
 description = """
-实时音视频播放（v2.9.1 起支持[同层渲染]((native-component#原生组件同层渲染))）。
+实时音视频播放（v2.9.1 起支持[同层渲染](https://developers.weixin.qq.com/miniprogram/dev/component/native-component.html#原生组件同层渲染)）。
 
 ## 申请开通
 
@@ -2129,7 +2129,7 @@ deprecated = false
 [[component.property]]
 name = "enable-casting"
 ty = "boolean"
-description = "是否支持投屏。开启后，可以通过 [LivePlayerContext]((LivePlayerContext)) 上相关方法进行操作。"
+description = "是否支持投屏。开启后，可以通过 [LivePlayerContext](https://developers.weixin.qq.com/miniprogram/dev/api/media/live/LivePlayerContext.html) 上相关方法进行操作。"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/live-player.html"
 value-option = []
 deprecated = false
@@ -2191,7 +2191,7 @@ deprecated = false
 [[component]]
 tag-name = "live-pusher"
 description = """
-实时音视频录制（v2.9.1 起支持[同层渲染]((native-component#原生组件同层渲染))）。需要[用户授权]((open-ability/authorize)) `scope.camera`、`scope.record`。
+实时音视频录制（v2.9.1 起支持[同层渲染](https://developers.weixin.qq.com/miniprogram/dev/component/native-component.html#原生组件同层渲染)）。需要[用户授权](https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/authorize.html) `scope.camera`、`scope.record`。
 
 ## 申请开通
 
@@ -2267,7 +2267,7 @@ deprecated = false
 [[component.property]]
 name = "enableVideoCustomRender"
 ty = "boolean"
-description = "自定义渲染，允许开发者自行处理所采集的视频帧，详见[LivePusherContext]((LivePusherContext))"
+description = "自定义渲染，允许开发者自行处理所采集的视频帧，详见[LivePusherContext](https://developers.weixin.qq.com/miniprogram/dev/api/media/live/LivePusherContext.html)"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/live-pusher.html"
 value-option = []
 deprecated = false
@@ -2762,7 +2762,7 @@ deprecated = false
 [[component]]
 tag-name = "map"
 description = '''
-地图 v2.7.0 起支持[同层渲染]((native-component#原生组件同层渲染))。
+地图 v2.7.0 起支持[同层渲染](https://developers.weixin.qq.com/miniprogram/dev/component/native-component.html#原生组件同层渲染)。
 
 map组件提供了地图展示、交互、叠加点线面及文字等功能，同时支持个性化地图样式，可结合地图服务 API 实现更丰富功能。
 
@@ -2778,8 +2778,8 @@ map组件提供了地图展示、交互、叠加点线面及文字等功能，�
 <img src="https://res.wx.qq.com/op_res/pelP4oFZ9LkFT9w_JgBCBtA58OQV_-LHokhgp2TyK5MgIRRzPl4PuTy6UFbzQf5qNsiHrpqXivoLwnSPnMvsCw" alt="image-20221216093905347" style="zoom:50%;" />
 
 注意：
-1. 自2023年6月29日0点起，该能力需要先购买再使用。若未购买，届时将无法使用该能力。具体购买方式见 [付费管理]((charge/intro))。
-2. 自2023年6月29日0时起，个性化地图配置界面的入口统一为[微信公众平台-付费管理]((charge/intro))，请从此入口进入，腾讯位置服务官网入口不再使用。已经在小程序生效的个性化样式配置，将于2023年6月29日0时变更为默认样式，如有个性化样式配置需求，请于6月29日0时前，前往[微信公众平台-付费管理]((charge/intro))进行相关能力的开通和配置。
+1. 自2023年6月29日0点起，该能力需要先购买再使用。若未购买，届时将无法使用该能力。具体购买方式见 [付费管理](https://developers.weixin.qq.com/miniprogram/dev/platform-capabilities/charge/intro.html)。
+2. 自2023年6月29日0时起，个性化地图配置界面的入口统一为[微信公众平台-付费管理](https://developers.weixin.qq.com/miniprogram/dev/platform-capabilities/charge/intro.html)，请从此入口进入，腾讯位置服务官网入口不再使用。已经在小程序生效的个性化样式配置，将于2023年6月29日0时变更为默认样式，如有个性化样式配置需求，请于6月29日0时前，前往[微信公众平台-付费管理](https://developers.weixin.qq.com/miniprogram/dev/platform-capabilities/charge/intro.html)进行相关能力的开通和配置。
 
 ## 地图服务API
 
@@ -2888,7 +2888,7 @@ deprecated = false
 [[component.property]]
 name = "controls"
 ty = "string"
-description = "控件（即将废弃，建议使用 [cover-view]((cover-view)) 代替）"
+description = "控件（即将废弃，建议使用 [cover-view](https://developers.weixin.qq.com/miniprogram/dev/component/cover-view.html) 代替）"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/map.html"
 value-option = []
 deprecated = false
@@ -3055,7 +3055,7 @@ deprecated = false
 
 [[component.event]]
 name = "tap"
-description = "点击地图时触发，{%version('2.9.0')%}起返回经纬度信息"
+description = "点击地图时触发，[2.9.0](https://developers.weixin.qq.com/miniprogram/analysis/experience/compatibility.html)起返回经纬度信息"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/map.html"
 deprecated = false
 
@@ -3205,7 +3205,7 @@ deprecated = false
 
 [[component]]
 tag-name = "movable-area"
-description = "[movable-view]((movable-view))的可移动区域。"
+description = "[movable-view](https://developers.weixin.qq.com/miniprogram/dev/component/movable-view.html)的可移动区域。"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/movable-area.html"
 event = []
 deprecated = false
@@ -3220,7 +3220,7 @@ deprecated = false
 
 [[component]]
 tag-name = "movable-view"
-description = "可移动的视图容器，在页面中可以拖拽滑动。[movable-view]((movable-view))必须在 [movable-area]((movable-area)) 组件中，并且必须是直接子节点，否则不能移动。"
+description = "可移动的视图容器，在页面中可以拖拽滑动。[movable-view](https://developers.weixin.qq.com/miniprogram/dev/component/movable-view.html)必须在 [movable-area](https://developers.weixin.qq.com/miniprogram/dev/component/movable-area.html) 组件中，并且必须是直接子节点，否则不能移动。"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/movable-view.html"
 deprecated = false
 
@@ -3336,7 +3336,7 @@ deprecated = false
 
 [[component.event]]
 name = "scale"
-description = "缩放过程中触发的事件，event.detail = {x, y, scale}，x和y字段在{%version('2.1.0')%}之后支持"
+description = "缩放过程中触发的事件，event.detail = {x, y, scale}，x和y字段在[2.1.0](https://developers.weixin.qq.com/miniprogram/analysis/experience/compatibility.html)之后支持"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/movable-view.html"
 deprecated = false
 
@@ -3355,9 +3355,9 @@ deprecated = false
 [[component]]
 tag-name = "navigation-bar"
 description = """
-页面导航条配置节点，用于指定导航栏的一些属性。只能是 [page-meta]((page-meta)) 组件内的第一个节点，需要配合它一同使用。
+页面导航条配置节点，用于指定导航栏的一些属性。只能是 [page-meta](https://developers.weixin.qq.com/miniprogram/dev/component/page-meta.html) 组件内的第一个节点，需要配合它一同使用。
 
-通过这个节点可以获得类似于调用 [`wx.setNavigationBarTitle`]((wx.setNavigationBarTitle)) [`wx.setNavigationBarColor`]((wx.setNavigationBarColor)) 等接口调用的效果。"""
+通过这个节点可以获得类似于调用 [`wx.setNavigationBarTitle`](https://developers.weixin.qq.com/miniprogram/dev/api/ui/navigation-bar/wx.setNavigationBarTitle.html) [`wx.setNavigationBarColor`](https://developers.weixin.qq.com/miniprogram/dev/api/ui/navigation-bar/wx.setNavigationBarColor.html) 等接口调用的效果。"""
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/navigation-bar.html"
 event = []
 deprecated = false
@@ -3599,7 +3599,7 @@ deprecated = false
 
 [[component]]
 tag-name = "nested-scroll-body"
-description = '嵌套 scroll-view 场景中属于里层 scroll-view 的节点，仅支持作为 `<scroll-view type="nested">` 模式的直接子节点。不支持复数子节点，渲染时会取其第一个子节点来渲染。具体用法可参考 [scroll-view]((scroll-view#嵌套模式使用方法))'
+description = '嵌套 scroll-view 场景中属于里层 scroll-view 的节点，仅支持作为 `<scroll-view type="nested">` 模式的直接子节点。不支持复数子节点，渲染时会取其第一个子节点来渲染。具体用法可参考 [scroll-view](https://developers.weixin.qq.com/miniprogram/dev/component/scroll-view.html#嵌套模式使用方法)'
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/nested-scroll-body.html"
 property = []
 event = []
@@ -3607,7 +3607,7 @@ deprecated = false
 
 [[component]]
 tag-name = "nested-scroll-header"
-description = '嵌套 scroll-view 场景中属于外层 scroll-view 的节点，仅支持作为 `<scroll-view type="nested">` 模式的直接子节点。不支持复数子节点，渲染时会取其第一个子节点来渲染。具体用法可参考 [scroll-view]((scroll-view#嵌套模式使用方法))'
+description = '嵌套 scroll-view 场景中属于外层 scroll-view 的节点，仅支持作为 `<scroll-view type="nested">` 模式的直接子节点。不支持复数子节点，渲染时会取其第一个子节点来渲染。具体用法可参考 [scroll-view](https://developers.weixin.qq.com/miniprogram/dev/component/scroll-view.html#嵌套模式使用方法)'
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/nested-scroll-header.html"
 property = []
 event = []
@@ -3968,9 +3968,9 @@ deprecated = false
 [[component]]
 tag-name = "page-meta"
 description = """
-页面属性配置节点，用于指定页面的一些属性、监听页面事件。只能是页面内的第一个节点。可以配合 [navigation-bar]((navigation-bar)) 组件一同使用。
+页面属性配置节点，用于指定页面的一些属性、监听页面事件。只能是页面内的第一个节点。可以配合 [navigation-bar](https://developers.weixin.qq.com/miniprogram/dev/component/navigation-bar.html) 组件一同使用。
 
-通过这个节点可以获得类似于调用 [`wx.setBackgroundTextStyle`]((wx.setBackgroundTextStyle)) [`wx.setBackgroundColor`]((wx.setBackgroundColor)) 等接口调用的效果。"""
+通过这个节点可以获得类似于调用 [`wx.setBackgroundTextStyle`](https://developers.weixin.qq.com/miniprogram/dev/api/ui/background/wx.setBackgroundTextStyle.html) [`wx.setBackgroundColor`](https://developers.weixin.qq.com/miniprogram/dev/api/ui/background/wx.setBackgroundColor.html) 等接口调用的效果。"""
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/page-meta.html"
 deprecated = false
 
@@ -4114,7 +4114,7 @@ deprecated = false
 
 [[component]]
 tag-name = "picker-view"
-description = "嵌入页面的滚动选择器。其中只可放置 [picker-view-column]((picker-view-column))组件，其它节点不会显示。"
+description = "嵌入页面的滚动选择器。其中只可放置 [picker-view-column](https://developers.weixin.qq.com/miniprogram/dev/component/picker-view-column.html)组件，其它节点不会显示。"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/picker-view.html"
 deprecated = false
 
@@ -4162,7 +4162,7 @@ deprecated = false
 
 [[component]]
 tag-name = "picker-view-column"
-description = "滚动选择器子项。仅可放置于[picker-view]((picker-view))中，其孩子节点的高度会自动设置成与[picker-view]((picker-view))的选中框的高度一致"
+description = "滚动选择器子项。仅可放置于[picker-view](https://developers.weixin.qq.com/miniprogram/dev/component/picker-view.html)中，其孩子节点的高度会自动设置成与[picker-view](https://developers.weixin.qq.com/miniprogram/dev/component/picker-view.html)的选中框的高度一致"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/picker-view-column.html"
 property = []
 event = []
@@ -4170,7 +4170,7 @@ deprecated = false
 
 [[component]]
 tag-name = "progress"
-description = "进度条。组件属性的长度单位默认为px，{%version('2.4.0')%}起支持传入单位(rpx/px)。"
+description = "进度条。组件属性的长度单位默认为px，[2.4.0](https://developers.weixin.qq.com/miniprogram/analysis/experience/compatibility.html)起支持传入单位(rpx/px)。"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/progress.html"
 deprecated = false
 
@@ -4278,7 +4278,7 @@ deprecated = false
 [[component.property]]
 name = "value"
 ty = "string"
-description = "[radio]((radio)) 标识。当该[radio]((radio)) 选中时，[radio-group]((radio-group)) 的 change 事件会携带[radio]((radio))的value"
+description = "[radio](https://developers.weixin.qq.com/miniprogram/dev/component/radio.html) 标识。当该[radio](https://developers.weixin.qq.com/miniprogram/dev/component/radio.html) 选中时，[radio-group](https://developers.weixin.qq.com/miniprogram/dev/component/radio-group.html) 的 change 事件会携带[radio](https://developers.weixin.qq.com/miniprogram/dev/component/radio.html)的value"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/radio.html"
 value-option = []
 deprecated = false
@@ -4309,14 +4309,14 @@ deprecated = false
 
 [[component]]
 tag-name = "radio-group"
-description = "单项选择器，内部由多个 [radio]((radio)) 组成。"
+description = "单项选择器，内部由多个 [radio](https://developers.weixin.qq.com/miniprogram/dev/component/radio.html) 组成。"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/radio-group.html"
 property = []
 deprecated = false
 
 [[component.event]]
 name = "change"
-description = "[radio-group]((radio-group))中选中项发生改变时触发 change 事件，detail = {value:[选中的radio的value的数组]}"
+description = "[radio-group](https://developers.weixin.qq.com/miniprogram/dev/component/radio-group.html)中选中项发生改变时触发 change 事件，detail = {value:[选中的radio的value的数组]}"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/radio-group.html"
 deprecated = false
 
@@ -4382,7 +4382,7 @@ deprecated = false
 
 [[component]]
 tag-name = "scroll-view"
-description = "可滚动视图区域。使用竖向滚动时，需要给[scroll-view]((scroll-view))一个固定高度，通过 WXSS 设置 height。组件属性的长度单位默认为px，{%version('2.4.0')%}起支持传入单位(rpx/px)。"
+description = "可滚动视图区域。使用竖向滚动时，需要给[scroll-view](https://developers.weixin.qq.com/miniprogram/dev/component/scroll-view.html)一个固定高度，通过 WXSS 设置 height。组件属性的长度单位默认为px，[2.4.0](https://developers.weixin.qq.com/miniprogram/analysis/experience/compatibility.html)起支持传入单位(rpx/px)。"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/scroll-view.html"
 deprecated = false
 
@@ -4595,7 +4595,7 @@ tag-name = "share-element"
 description = """
 共享元素。
 
-共享元素是一种动画形式，类似于 [flutter Hero](https://flutterchina.club/animations/hero-animations/)动画，表现为元素像是在页面间穿越一样。该组件需与 [page-container]((page-container)) 组件结合使用。
+共享元素是一种动画形式，类似于 [flutter Hero](https://flutterchina.club/animations/hero-animations/)动画，表现为元素像是在页面间穿越一样。该组件需与 [page-container](https://developers.weixin.qq.com/miniprogram/dev/component/page-container.html) 组件结合使用。
 
 使用时需在当前页放置 `share-element` 组件，同时在 `page-container` 容器中放置对应的 `share-element` 组件，对应关系通过属性值 `key` 映射。当设置 `page-container` 显示时，`transform` 属性为 `true` 的共享元素会产生动画。当前页面容器退出时，会产生返回动画。"""
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/share-element.html"
@@ -4750,7 +4750,7 @@ deprecated = false
 
 [[component]]
 tag-name = "snapshot"
-description = "截图组件。 支持将其子节点的渲染结果导出成图片，该组件需配合 [snapshot]((api/skyline/Snapshot)) 接口使用。 目前仅在 [Skyline 渲染引擎]((skyline/introduction)) 下支持。"
+description = "截图组件。 支持将其子节点的渲染结果导出成图片，该组件需配合 [snapshot](https://developers.weixin.qq.com/miniprogram/dev/api/skyline/Snapshot.html) 接口使用。 目前仅在 [Skyline 渲染引擎](https://developers.weixin.qq.com/miniprogram/dev/framework/runtime/skyline/introduction.html) 下支持。"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/snapshot.html"
 event = []
 deprecated = false
@@ -4774,7 +4774,7 @@ deprecated = false
 
 [[component]]
 tag-name = "sticky-header"
-description = '吸顶布局容器，仅支持作为 `<scroll-view type="custom">` 模式的直接子节点或 [sticky-section]((sticky-section)) 组件直接子节点'
+description = '吸顶布局容器，仅支持作为 `<scroll-view type="custom">` 模式的直接子节点或 [sticky-section](https://developers.weixin.qq.com/miniprogram/dev/component/sticky-section.html) 组件直接子节点'
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/sticky-header.html"
 event = []
 deprecated = false
@@ -4820,7 +4820,7 @@ deprecated = false
 
 [[component]]
 tag-name = "swiper"
-description = "滑块视图容器。其中只可放置[swiper-item]((swiper-item))组件，否则会导致未定义的行为。"
+description = "滑块视图容器。其中只可放置[swiper-item](https://developers.weixin.qq.com/miniprogram/dev/component/swiper-item.html)组件，否则会导致未定义的行为。"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/swiper.html"
 deprecated = false
 
@@ -4972,7 +4972,7 @@ deprecated = false
 
 [[component]]
 tag-name = "swiper-item"
-description = "仅可放置在[swiper]((swiper))组件中，宽高自动设置为100%。"
+description = "仅可放置在[swiper](https://developers.weixin.qq.com/miniprogram/dev/component/swiper.html)组件中，宽高自动设置为100%。"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/swiper-item.html"
 event = []
 deprecated = false
@@ -5062,7 +5062,7 @@ deprecated = false
 
 [[component]]
 tag-name = "textarea"
-description = "多行输入框。该组件是[原生组件]((native-component))，使用时请注意相关限制。"
+description = "多行输入框。该组件是[原生组件](https://developers.weixin.qq.com/miniprogram/dev/component/native-component.html)，使用时请注意相关限制。"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/textarea.html"
 deprecated = false
 
@@ -5286,14 +5286,14 @@ deprecated = false
 
 [[component]]
 tag-name = "video"
-description = "视频（v2.4.0 起支持[同层渲染]((native-component#原生组件同层渲染))）。"
+description = "视频（v2.4.0 起支持[同层渲染](https://developers.weixin.qq.com/miniprogram/dev/component/native-component.html#原生组件同层渲染)）。"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/video.html"
 deprecated = false
 
 [[component.property]]
 name = "src"
 ty = "string"
-description = "要播放视频的资源地址，支持网络路径、本地临时路径、云文件ID（{%version('2.3.0')%}）"
+description = "要播放视频的资源地址，支持网络路径、本地临时路径、云文件ID（[2.3.0](https://developers.weixin.qq.com/miniprogram/analysis/experience/compatibility.html)）"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/video.html"
 value-option = []
 deprecated = false
@@ -5465,7 +5465,7 @@ deprecated = false
 [[component.property]]
 name = "poster"
 ty = "string"
-description = "视频封面的图片网络资源地址或云文件ID（{%version('2.3.0')%}）。若 controls 属性值为 false 则设置 poster 无效"
+description = "视频封面的图片网络资源地址或云文件ID（[2.3.0](https://developers.weixin.qq.com/miniprogram/analysis/experience/compatibility.html)）。若 controls 属性值为 false 则设置 poster 无效"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/video.html"
 value-option = []
 deprecated = false
@@ -5554,7 +5554,7 @@ deprecated = false
 [[component.property]]
 name = "ad-unit-id"
 ty = "string"
-description = "视频前贴广告单元ID，更多详情可参考开放能力[视频前贴广告]((video-patch-ad))"
+description = "视频前贴广告单元ID，更多详情可参考开放能力[视频前贴广告](https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/ad/video-patch-ad.html)"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/video.html"
 value-option = []
 deprecated = false
@@ -5570,7 +5570,7 @@ deprecated = false
 [[component.property]]
 name = "show-casting-button"
 ty = "boolean"
-description = "显示投屏按钮。安卓在同层渲染下生效，支持 DLNA 协议；iOS 支持 AirPlay 和 DLNA 协议。可以通过[VideoContext]((VideoContext))的相关方法进行操作。"
+description = "显示投屏按钮。安卓在同层渲染下生效，支持 DLNA 协议；iOS 支持 AirPlay 和 DLNA 协议。可以通过[VideoContext](https://developers.weixin.qq.com/miniprogram/dev/api/media/video/VideoContext.html)的相关方法进行操作。"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/video.html"
 value-option = []
 deprecated = false
@@ -5856,7 +5856,7 @@ deprecated = false
 [[component]]
 tag-name = "voip-room"
 description = """
-多人音视频对话。需[用户授权]((open-ability/authorize)) `scope.camera`、`scope.record`。
+多人音视频对话。需[用户授权](https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/authorize.html) `scope.camera`、`scope.record`。
 
   ## 申请开通
   
@@ -5952,7 +5952,7 @@ tag-name = "web-view"
 description = """
 承载网页的容器。会自动铺满整个小程序页面，**个人类型的小程序暂不支持使用。**
 
-客户端 6.7.2 版本开始，[`navigationStyle: custom`](../reference/configuration/app.md) 对 [web-view]((web-view)) 组件无效"""
+客户端 6.7.2 版本开始，[`navigationStyle: custom`](../reference/configuration/app.md) 对 [web-view](https://developers.weixin.qq.com/miniprogram/dev/component/web-view.html) 组件无效"""
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/web-view.html"
 deprecated = false
 
@@ -5966,7 +5966,7 @@ deprecated = false
 
 [[component.event]]
 name = "message"
-description = "网页向小程序 postMessage 时，会在以下特定时机触发并收到消息：小程序后退、组件销毁、分享、复制链接（{%version('2.31.1')%}）。e.detail = { data }，data是多次 postMessage 的参数组成的数组。"
+description = "网页向小程序 postMessage 时，会在以下特定时机触发并收到消息：小程序后退、组件销毁、分享、复制链接（[2.31.1](https://developers.weixin.qq.com/miniprogram/analysis/experience/compatibility.html)）。e.detail = { data }，data是多次 postMessage 的参数组成的数组。"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/web-view.html"
 deprecated = false
 
