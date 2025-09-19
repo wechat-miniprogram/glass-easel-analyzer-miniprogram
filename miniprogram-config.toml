@@ -266,6 +266,11 @@ value = "reset"
 description = "重置表单"
 deprecated = false
 
+[[component.property.value-option]]
+value = "submitToGroup"
+description = "转发文本到聊天"
+deprecated = false
+
 [[component.property]]
 name = "open-type"
 ty = "string"
@@ -275,7 +280,7 @@ deprecated = false
 
 [[component.property.value-option]]
 value = "contact"
-description = "打开客服会话，如果用户在会话中点击消息卡片后返回小程序，可以从 bindcontact 回调中获得具体信息，[具体说明]((customer-message))"
+description = "打开客服会话，如果用户在会话中点击消息卡片后返回小程序，可以从 bindcontact 回调中获得具体信息，[具体说明]((customer-message))。鸿蒙 OS 暂不支持"
 deprecated = false
 
 [[component.property.value-option]]
@@ -385,7 +390,7 @@ deprecated = false
 [[component.property]]
 name = "session-from"
 ty = "string"
-description = '会话来源，open-type="contact"时有效'
+description = '会话来源，open-type="contact"时有效，长度不超过 1024 个字符'
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/button.html"
 value-option = []
 deprecated = false
@@ -434,6 +439,22 @@ deprecated = false
 name = "phone-number-no-quota-toast"
 ty = "boolean"
 description = '当手机号快速验证或手机号实时验证额度用尽时，是否对用户展示“申请获取你的手机号，但该功能使用次数已达当前小程序上限，暂时无法使用”的提示，默认展示，open-type="getPhoneNumber" 或 open-type="getRealtimePhoneNumber" 时有效'
+reference = "https://developers.weixin.qq.com/miniprogram/dev/component/button.html"
+value-option = []
+deprecated = false
+
+[[component.property]]
+name = "need-show-entrance"
+ty = "boolean"
+description = "转发的文本消息是否要带小程序入口"
+reference = "https://developers.weixin.qq.com/miniprogram/dev/component/button.html"
+value-option = []
+deprecated = false
+
+[[component.property]]
+name = "entrance-path"
+ty = "string"
+description = "从消息小程序入口打开小程序的路径，默认为聊天工具启动路径"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/button.html"
 value-option = []
 deprecated = false
@@ -976,14 +997,6 @@ value-option = []
 deprecated = false
 
 [[component.property]]
-name = "snap"
-ty = "boolean"
-description = "拖拽后是否自动对齐关键点"
-reference = "https://developers.weixin.qq.com/miniprogram/dev/component/draggable-sheet.html"
-value-option = []
-deprecated = false
-
-[[component.property]]
 name = "worklet:onsizeupdate"
 ty = "string"
 description = "尺寸发生变化时触发，仅支持 worklet 作为回调。event = {pixels, size}"
@@ -1056,6 +1069,22 @@ reference = "https://developers.weixin.qq.com/miniprogram/dev/component/editor.h
 value-option = []
 deprecated = false
 
+[[component.property]]
+name = "enterkeyhint"
+ty = "string"
+description = "定义虚拟键盘回车键的[操作标签](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Global_attributes/enterkeyhint)"
+reference = "https://developers.weixin.qq.com/miniprogram/dev/component/editor.html"
+value-option = []
+deprecated = false
+
+[[component.property]]
+name = "confirm-hold"
+ty = "boolean"
+description = "点击键盘回车键时是否保持键盘不收起"
+reference = "https://developers.weixin.qq.com/miniprogram/dev/component/editor.html"
+value-option = []
+deprecated = false
+
 [[component.event]]
 name = "ready"
 description = "编辑器初始化完成时触发"
@@ -1084,6 +1113,21 @@ deprecated = false
 name = "statuschange"
 description = "通过 Context 方法改变编辑器内样式时触发，返回选区已设置的样式"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/editor.html"
+deprecated = false
+
+[[component]]
+tag-name = "editor-portal"
+description = "渲染 [editor](https://developers.weixin.qq.com/miniprogram/dev/component/editor.html) 组件的自定义区块。相关接口 [EditorCtx.insertCustomBlock](https://developers.weixin.qq.com/miniprogram/dev/api/media/editor/EditorContext.insertCustomBlock.html)。"
+reference = "https://developers.weixin.qq.com/miniprogram/dev/component/editor-portal.html"
+event = []
+deprecated = false
+
+[[component.property]]
+name = "key"
+ty = "string"
+description = "自定义区块的 blockId"
+reference = "https://developers.weixin.qq.com/miniprogram/dev/component/editor-portal.html"
+value-option = []
 deprecated = false
 
 [[component]]
@@ -1120,6 +1164,12 @@ deprecated = false
 [[component.event]]
 name = "reset"
 description = "表单重置时会触发 reset 事件"
+reference = "https://developers.weixin.qq.com/miniprogram/dev/component/form.html"
+deprecated = false
+
+[[component.event]]
+name = "submitToGroup"
+description = "用户发送文本到聊天后触发，但不代表最终发送成功"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/form.html"
 deprecated = false
 
@@ -1725,7 +1775,7 @@ deprecated = false
 [[component.property]]
 name = "safe-password-cert-path"
 ty = "string"
-description = "安全键盘加密公钥的路径，只支持包内路径"
+description = "安全键盘加密公钥的路径，只支持包内路径。鸿蒙 OS 暂不支持"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/input.html"
 value-option = []
 deprecated = false
@@ -1733,7 +1783,7 @@ deprecated = false
 [[component.property]]
 name = "safe-password-length"
 ty = "string"
-description = "安全键盘输入密码长度"
+description = "安全键盘输入密码长度。鸿蒙 OS 暂不支持"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/input.html"
 value-option = []
 deprecated = false
@@ -1741,7 +1791,7 @@ deprecated = false
 [[component.property]]
 name = "safe-password-time-stamp"
 ty = "string"
-description = "安全键盘加密时间戳"
+description = "安全键盘加密时间戳。鸿蒙 OS 暂不支持"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/input.html"
 value-option = []
 deprecated = false
@@ -1749,7 +1799,7 @@ deprecated = false
 [[component.property]]
 name = "safe-password-nonce"
 ty = "string"
-description = "安全键盘加密盐值"
+description = "安全键盘加密盐值。鸿蒙 OS 暂不支持"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/input.html"
 value-option = []
 deprecated = false
@@ -1757,7 +1807,7 @@ deprecated = false
 [[component.property]]
 name = "safe-password-salt"
 ty = "string"
-description = "安全键盘计算hash盐值，若指定custom-hash 则无效"
+description = "安全键盘计算hash盐值，若指定custom-hash 则无效。鸿蒙 OS 暂不支持"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/input.html"
 value-option = []
 deprecated = false
@@ -1765,44 +1815,50 @@ deprecated = false
 [[component.property]]
 name = "safe-password-custom-hash"
 ty = "string"
-description = "安全键盘计算hash的算法表达式，如 `md5(sha1('foo' + sha256(sm3(password + 'bar'))))`"
+description = "安全键盘计算hash的算法表达式，如 `md5(sha1('foo' + sha256(sm3(password + 'bar'))))`。鸿蒙 OS 暂不支持"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/input.html"
 value-option = []
 deprecated = false
 
 [[component.event]]
 name = "input"
-description = "键盘输入时触发，event.detail = {value, cursor, keyCode}，keyCode 为键值，2.1.0 起支持，处理函数可以直接 return 一个字符串，将替换输入框的内容。"
+description = "键盘输入时或内容改变时触发。event.detail = { value: string, cursor?: number, keyCode?: number }，cursor 为光标位置，keyCode 为键值。2.1.0 起支持，处理函数可以直接 return 一个字符串，将替换输入框的内容。"
+reference = "https://developers.weixin.qq.com/miniprogram/dev/component/input.html"
+deprecated = false
+
+[[component.event]]
+name = "change"
+description = "键盘非聚焦状态内容改变时触发。event.detail = { value: string }"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/input.html"
 deprecated = false
 
 [[component.event]]
 name = "focus"
-description = "输入框聚焦时触发，event.detail = { value, height }，height 为键盘高度，在基础库 1.9.90 起支持"
+description = "输入框聚焦时触发，event.detail = { value: string, height: number }，height 为键盘高度，在基础库 1.9.90 起支持"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/input.html"
 deprecated = false
 
 [[component.event]]
 name = "blur"
-description = "输入框失去焦点时触发，event.detail = { value, encryptedValue, encryptError }"
+description = "输入框失去焦点时触发，event.detail = { value: string, encryptedValue?: string, encryptError?: string }"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/input.html"
 deprecated = false
 
 [[component.event]]
 name = "confirm"
-description = "点击完成按钮时触发，event.detail = { value }"
+description = "点击完成按钮时触发，event.detail = { value: string, encryptedValue?: string, encryptError?: string }"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/input.html"
 deprecated = false
 
 [[component.event]]
 name = "keyboardheightchange"
-description = "键盘高度发生变化的时候触发此事件，event.detail = {height: height, duration: duration}"
+description = "键盘高度发生变化的时候触发此事件，event.detail = {height: number, duration: number}"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/input.html"
 deprecated = false
 
 [[component.event]]
 name = "nicknamereview"
-description = '用户昵称审核完毕后触发，仅在 type 为 "nickname" 时有效，event.detail = { pass, timeout }'
+description = '用户昵称审核完毕后触发，仅在 type 为 "nickname" 时有效，event.detail = { pass: boolean, timeout: boolean }'
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/input.html"
 deprecated = false
 
@@ -1889,6 +1945,14 @@ reference = "https://developers.weixin.qq.com/miniprogram/dev/component/list-bui
 value-option = []
 deprecated = false
 
+[[component.property]]
+name = "initial-child-count"
+ty = "string"
+description = "首次渲染时渲染的列表项数量，用于减少首次渲染时的白屏时长。不传则首屏也根据布局结果按需渲染"
+reference = "https://developers.weixin.qq.com/miniprogram/dev/component/list-builder.html"
+value-option = []
+deprecated = false
+
 [[component.event]]
 name = "itembuild"
 description = "列表项创建时触发，event.detail = {index}，index 即被创建的列表项序号"
@@ -1929,9 +1993,9 @@ description = """
 | ----------------- | ---------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
 | 社交              | 直播                                                                                                                         | 涉及娱乐性质，如明星直播、生活趣事直播、宠物直播等。选择该类目后首次提交代码审核，需经当地互联网主管机关审核确认，预计审核时长 7 天左右 |
 | 教育              | 在线视频课程                                                                                                                 | 网课、在线培训、讲座等教育类直播                                                                                                        |
-| 医疗              | 互联网医院，公立医疗机构，其他私立医疗机构                                                                                                         | 问诊、大型健康讲座等直播                                                                                                                |
-| 金融              | 银行、信托、公募基金、私募基金、证券/期货、证券、期货投资咨询、保险、征信业务、新三板信息服务平台、股票信息服务平台（港股/美股）、消费金融、融资担保 | 金融产品视频客服理赔、金融产品推广直播等                                                                                                |
-| 汽车              | 汽车预售服务                                                                                                                 | 汽车预售、推广直播                                                                                                                      |
+| 医疗              | 互联网医院，公立医疗机构，三级私立医疗机构，其他私立医疗机构                                                                                                         | 问诊、大型健康讲座等直播                                                                                                              |
+| 金融              | 银行、信托、公募基金、私募基金、证券/期货、证券、期货投资咨询、保险、企业征信、新三板信息服务平台、股票信息服务平台、股票信息服务平台（港股/美股）、消费金融、融资担保、汽车金融/融资租赁 | 金融产品视频客服理赔、金融产品推广直播等                                                                                              |
+| 汽车              | 汽车预售                                                                                                                 | 汽车预售、推广直播                                                                                                                         |
 | 政府主体账号      | /                                                                                                                            | 政府相关工作推广直播、领导讲话直播等                                                                                                    |
 | IT科技            |  多方通信；音视频设备                                                                                                          | 为多方提供电话会议/视频会议等服务；智能家居场景下控制摄像头                                                                                                    |
 | 房地产服务         | 房地产营销 | 房地产营销直播服务、在线音视频带看等 |
@@ -2094,7 +2158,7 @@ description = "路由 pop 时触发小窗"
 deprecated = false
 
 [[component.property]]
-name = "picture-in-picture-init-position="
+name = "picture-in-picture-init-position"
 ty = "string"
 description = "小窗模式下小窗的初始显示位置，格式为 (alignment, y)，其中 alignment 表示小窗吸附屏幕左侧还是右侧，可选值为 left、right，y 代表小窗最顶部所在的屏幕高度百分比"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/live-player.html"
@@ -2197,15 +2261,15 @@ description = """
 
 暂只针对国内主体如下类目的小程序开放，需要先通过类目审核，再在小程序管理后台，「开发」-「接口设置」中自助开通该组件权限。
 
-| 一级类目/主体类型 | 二级类目                                                                                                                     | 小程序内容场景                                                                                                                        |
-| ----------------- | ---------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| 社交              | 直播                                                                                                                         | 涉及娱乐性质，如明星直播、生活趣事直播、宠物直播等。选择该类目后首次提交代码审核，需经当地互联网主管机关审核确认，预计审核时长7天左右 |
-| 教育              | 在线视频课程                                                                                                                 | 网课、在线培训、讲座等教育类直播                                                                                                      |
-| 医疗              | 互联网医院，公立医疗机构，其他私立医疗机构                                                                                                         | 问诊、大型健康讲座等直播                                                                                                              |
-| 金融              | 银行、信托、公募基金、私募基金、证券/期货、证券、期货投资咨询、保险、征信业务、新三板信息服务平台、股票信息服务平台（港股/美股）、消费金融、融资担保 | 金融产品视频客服理赔、金融产品推广直播等                                                                                              |
-| 汽车              | 汽车预售服务                                                                                                                 | 汽车预售、推广直播                                                                                                                    |
-| 政府主体账号      | /                                                                                                                            | 政府相关工作推广直播、领导讲话直播等                                                                                                  |
-| IT科技            |  多方通信；音视频设备                                                                                                          | 为多方提供电话会议/视频会议等服务；智能家居场景下控制摄像头                                                                                                       |
+| 一级类目/主体类型 | 二级类目                                                                                                                     | 小程序内容场景                                                                                                                          |
+| ----------------- | ---------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
+| 社交              | 直播                                                                                                                         | 涉及娱乐性质，如明星直播、生活趣事直播、宠物直播等。选择该类目后首次提交代码审核，需经当地互联网主管机关审核确认，预计审核时长 7 天左右 |
+| 教育              | 在线视频课程                                                                                                                 | 网课、在线培训、讲座等教育类直播                                                                                                        |
+| 医疗              | 互联网医院，公立医疗机构，三级私立医疗机构，其他私立医疗机构                                                                                                         | 问诊、大型健康讲座等直播                                                                                                              |
+| 金融              | 银行、信托、公募基金、私募基金、证券/期货、证券、期货投资咨询、保险、企业征信、新三板信息服务平台、股票信息服务平台、股票信息服务平台（港股/美股）、消费金融、融资担保、汽车金融/融资租赁 | 金融产品视频客服理赔、金融产品推广直播等                                                                                              |
+| 汽车              | 汽车预售                                                                                                                 | 汽车预售、推广直播                                                                                                                         |
+| 政府主体账号      | /                                                                                                                            | 政府相关工作推广直播、领导讲话直播等                                                                                                    |
+| IT科技            |  多方通信；音视频设备                                                                                                          | 为多方提供电话会议/视频会议等服务；智能家居场景下控制摄像头                                                                                                    |
 | 房地产服务         | 房地产营销 | 房地产营销直播服务、在线音视频带看等 |
 | 商业服务 | 公证 | 在线业务办理等 |"""
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/live-pusher.html"
@@ -2316,7 +2380,7 @@ deprecated = false
 [[component.property]]
 name = "beauty"
 ty = "string"
-description = "美颜，取值范围 0-9 ，0 表示关闭"
+description = "美颜，取值范围 0-9 ，0 表示关闭。鸿蒙 OS 暂不支持"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/live-pusher.html"
 value-option = []
 deprecated = false
@@ -2551,7 +2615,7 @@ deprecated = false
 [[component.property]]
 name = "beauty-style"
 ty = "string"
-description = "设置美颜类型"
+description = "设置美颜类型。鸿蒙 OS 暂不支持"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/live-pusher.html"
 deprecated = false
 
@@ -3601,8 +3665,15 @@ deprecated = false
 tag-name = "nested-scroll-body"
 description = '嵌套 scroll-view 场景中属于里层 scroll-view 的节点，仅支持作为 `<scroll-view type="nested">` 模式的直接子节点。不支持复数子节点，渲染时会取其第一个子节点来渲染。具体用法可参考 [scroll-view](https://developers.weixin.qq.com/miniprogram/dev/component/scroll-view.html#嵌套模式使用方法)'
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/nested-scroll-body.html"
-property = []
 event = []
+deprecated = false
+
+[[component.property]]
+name = "offset-top"
+ty = "string"
+description = "滚动目标距离顶部的距离(px)。在外层 scroll-view 滚动时此组件会在主轴方向会逐渐撑开，直到此组件顶部与视窗顶部距离为该属性值时才开始里层 scroll-view 的滚动。默认为 0，即表示此组件撑开到顶部与视窗顶部齐平时才开始里层 scroll-view 的滚动。"
+reference = "https://developers.weixin.qq.com/miniprogram/dev/component/nested-scroll-body.html"
+value-option = []
 deprecated = false
 
 [[component]]
@@ -3839,6 +3910,65 @@ deprecated = false
 name = "error"
 description = "群名称或用户信息为空时触发"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/open-data.html"
+deprecated = false
+
+[[component]]
+tag-name = "open-data-item"
+description = "展示微信开放数据，需配合 [open-data-list](https://developers.weixin.qq.com/miniprogram/dev/component/open-data-list.html) 组件使用。"
+reference = "https://developers.weixin.qq.com/miniprogram/dev/component/open-data-item.html"
+event = []
+deprecated = false
+
+[[component.property]]
+name = "type"
+ty = "string"
+description = "开放数据类型"
+reference = "https://developers.weixin.qq.com/miniprogram/dev/component/open-data-item.html"
+deprecated = false
+
+[[component.property.value-option]]
+value = "userNickName"
+description = "用户昵称"
+deprecated = false
+
+[[component.property.value-option]]
+value = "userAvatar"
+description = "用户头像"
+deprecated = false
+
+[[component.property]]
+name = "index"
+ty = "string"
+description = "序号"
+reference = "https://developers.weixin.qq.com/miniprogram/dev/component/open-data-item.html"
+value-option = []
+deprecated = false
+
+[[component]]
+tag-name = "open-data-list"
+description = "展示微信开放数据。"
+reference = "https://developers.weixin.qq.com/miniprogram/dev/component/open-data-list.html"
+event = []
+deprecated = false
+
+[[component.property]]
+name = "type"
+ty = "string"
+description = "开放数据类型"
+reference = "https://developers.weixin.qq.com/miniprogram/dev/component/open-data-list.html"
+deprecated = false
+
+[[component.property.value-option]]
+value = "groupMembers"
+description = "群成员信息"
+deprecated = false
+
+[[component.property]]
+name = "members"
+ty = "string"
+description = "群成员group_openid列表"
+reference = "https://developers.weixin.qq.com/miniprogram/dev/component/open-data-list.html"
+value-option = []
 deprecated = false
 
 [[component]]
@@ -4443,6 +4573,14 @@ value-option = []
 deprecated = false
 
 [[component.property]]
+name = "scroll-into-view-offset"
+ty = "string"
+description = "跳转到 scroll-into-view 目标节点时的额外偏移。skyline 自 3.1.0 版本开始支持，webview 自 3.6.0 版本开始支持。"
+reference = "https://developers.weixin.qq.com/miniprogram/dev/component/scroll-view.html"
+value-option = []
+deprecated = false
+
+[[component.property]]
 name = "scroll-with-animation"
 ty = "boolean"
 description = "在设置滚动条位置时使用动画过渡"
@@ -4453,7 +4591,7 @@ deprecated = false
 [[component.property]]
 name = "enable-back-to-top"
 ty = "boolean"
-description = "iOS点击顶部状态栏、安卓双击标题栏时，滚动条返回顶部，只支持竖向。自 2.27.3 版本开始，若非显式设置为 false，则在显示尺寸大于屏幕 90% 时自动开启。"
+description = "iOS点击顶部状态栏、安卓双击标题栏时，滚动条返回顶部，只支持竖向。自 2.27.3 版本开始，若非显式设置为 false，则在显示尺寸大于屏幕 90% 时自动开启。鸿蒙 OS 暂不支持"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/scroll-view.html"
 value-option = []
 deprecated = false
@@ -4530,6 +4668,14 @@ reference = "https://developers.weixin.qq.com/miniprogram/dev/component/scroll-v
 value-option = []
 deprecated = false
 
+[[component.property]]
+name = "scroll-anchoring"
+ty = "boolean"
+description = "开启 scroll anchoring 特性，即控制滚动位置不随内容变化而抖动，可参考 CSS `overflow-anchor` 属性。webview 仅在 iOS 下生效。skyline 自 3.6.2 版本开始支持，默认为 true 。"
+reference = "https://developers.weixin.qq.com/miniprogram/dev/component/scroll-view.html"
+value-option = []
+deprecated = false
+
 [[component.event]]
 name = "dragstart"
 description = "滑动开始事件 (同时开启 enhanced 属性后生效) detail { scrollTop, scrollLeft }"
@@ -4562,7 +4708,7 @@ deprecated = false
 
 [[component.event]]
 name = "scroll"
-description = "滚动时触发，event.detail = {scrollLeft, scrollTop, scrollHeight, scrollWidth, deltaX, deltaY}"
+description = "滚动时触发，event.detail = { scrollLeft, scrollTop, scrollHeight, scrollWidth, deltaX, deltaY }。skyline 从 3.6.6开始，额外具有 boundaryVelocity 字段：如果该次滚动会触碰到边界，从该次滚动触发起到下一个滚动事件发生或者当次滚动事件结束为止 boundaryVelocity 将被置为触碰边界时的速度，否则置为 NAN。"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/scroll-view.html"
 deprecated = false
 
@@ -4588,6 +4734,26 @@ deprecated = false
 name = "refresherabort"
 description = "自定义下拉刷新被中止"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/scroll-view.html"
+deprecated = false
+
+[[component]]
+tag-name = "selection"
+description = "局部文本选区。"
+reference = "https://developers.weixin.qq.com/miniprogram/dev/component/selection.html"
+deprecated = false
+
+[[component.property]]
+name = "disable-context-menu"
+ty = "boolean"
+description = "是否隐藏客户端原生文本选区按钮"
+reference = "https://developers.weixin.qq.com/miniprogram/dev/component/selection.html"
+value-option = []
+deprecated = false
+
+[[component.event]]
+name = "selectionchange"
+description = "当选区发生变化时触发 selectionchange 事件 event.detail = { isCollapsed, selectedString, firstNodeId, firstOffset, lastNodeId, lastOffset, firstRangeRect }"
+reference = "https://developers.weixin.qq.com/miniprogram/dev/component/selection.html"
 deprecated = false
 
 [[component]]
@@ -4776,13 +4942,20 @@ deprecated = false
 tag-name = "sticky-header"
 description = '吸顶布局容器，仅支持作为 `<scroll-view type="custom">` 模式的直接子节点或 [sticky-section](https://developers.weixin.qq.com/miniprogram/dev/component/sticky-section.html) 组件直接子节点'
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/sticky-header.html"
-event = []
 deprecated = false
 
 [[component.property]]
 name = "offset-top"
 ty = "string"
-description = "吸顶时与顶部的距(px)"
+description = "吸顶时与视窗顶部的距离(px)"
+reference = "https://developers.weixin.qq.com/miniprogram/dev/component/sticky-header.html"
+value-option = []
+deprecated = false
+
+[[component.property]]
+name = "allow-overlapping"
+ty = "string"
+description = "是否允许与前一个 sticky-header 重叠"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/sticky-header.html"
 value-option = []
 deprecated = false
@@ -4793,6 +4966,12 @@ ty = "string"
 description = "长度为 4 的数组，按 top、right、bottom、left 顺序指定内边距(px)"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/sticky-header.html"
 value-option = []
+deprecated = false
+
+[[component.event]]
+name = "stickontopchange"
+description = "吸顶状态变化事件，仅支持非 worklet 的组件方法作为回调。event.detail = { isStickOnTop }，当 sticky-header 吸顶时为 true，否则为 false。"
+reference = "https://developers.weixin.qq.com/miniprogram/dev/component/sticky-header.html"
 deprecated = false
 
 [[component]]
@@ -4816,6 +4995,218 @@ ty = "string"
 description = "长度为 4 的数组，按 top、right、bottom、left 顺序指定内边距"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/sticky-section.html"
 value-option = []
+deprecated = false
+
+[[component]]
+tag-name = "store-coupon"
+description = "小程序内嵌微信小店优惠券，展示小店优惠券，并进行跳转交易。"
+reference = "https://developers.weixin.qq.com/miniprogram/dev/component/store-coupon.html"
+deprecated = false
+
+[[component.property]]
+name = "appid"
+ty = "string"
+description = "小店appid。获取方式：[小店后台](https://store.weixin.qq.com/shop/setting/home) - 店铺管理 - 基础信息 - 账号信息 - 微信小店ID。"
+reference = "https://developers.weixin.qq.com/miniprogram/dev/component/store-coupon.html"
+value-option = []
+deprecated = false
+
+[[component.property]]
+name = "coupon-id"
+ty = "string"
+description = "优惠券id。获取小店优惠券id，可以通过[小店后台](https://store.weixin.qq.com/shop/marketing/coupon) - 营销中心 - 优惠券。"
+reference = "https://developers.weixin.qq.com/miniprogram/dev/component/store-coupon.html"
+value-option = []
+deprecated = false
+
+[[component.property]]
+name = "custom-style"
+ty = "string"
+description = "自定义样式。支持自定义的样式请查看custom-style。"
+reference = "https://developers.weixin.qq.com/miniprogram/dev/component/store-coupon.html"
+value-option = []
+deprecated = false
+
+[[component.property]]
+name = "promoter-share-link"
+ty = "string"
+description = "推客参数。对于「机构推广券」类型优惠券，通过该参数，支持推客染色，可以通过[接口](https://developers.weixin.qq.com/doc/store/leagueheadsupplier/API/promotion/content/coupon/getcouponpromotersharelink.html)获取。"
+reference = "https://developers.weixin.qq.com/miniprogram/dev/component/store-coupon.html"
+value-option = []
+deprecated = false
+
+[[component.event]]
+name = "entersuccess"
+description = "跳转小店成功的回调。"
+reference = "https://developers.weixin.qq.com/miniprogram/dev/component/store-coupon.html"
+deprecated = false
+
+[[component.event]]
+name = "entererror"
+description = "跳转小店失败的回调，event.detail={code,message}。"
+reference = "https://developers.weixin.qq.com/miniprogram/dev/component/store-coupon.html"
+deprecated = false
+
+[[component]]
+tag-name = "store-gift"
+description = "小程序送礼物接口支持小程序调用官方组件完成一次微信礼物的赠送，送礼后，用户可通过微信【我】-【订单与卡券】查看礼物订单详情。"
+reference = "https://developers.weixin.qq.com/miniprogram/dev/component/store-gift.html"
+deprecated = false
+
+[[component.property]]
+name = "present-order-id"
+ty = "string"
+description = "礼物订单id，调用“创建并发送礼物”或通过“查询礼物订单列表”open api拿到，[open api文档链接](https://developers.weixin.qq.com/miniprogram/dev/platform-capabilities/business-capabilities/cooperation_shop/activity_present_cooperation_shop.html)。"
+reference = "https://developers.weixin.qq.com/miniprogram/dev/component/store-gift.html"
+value-option = []
+deprecated = false
+
+[[component.property]]
+name = "open-id"
+ty = "string"
+description = "用户openid。"
+reference = "https://developers.weixin.qq.com/miniprogram/dev/component/store-gift.html"
+value-option = []
+deprecated = false
+
+[[component.property]]
+name = "show-gift-card"
+ty = "boolean"
+description = "控制是否展示礼物卡片，默认展示礼物卡片。"
+reference = "https://developers.weixin.qq.com/miniprogram/dev/component/store-gift.html"
+value-option = []
+deprecated = false
+
+[[component.event]]
+name = "success"
+description = "打开礼物成功的回调，event.detail={code,message}。【新特性支持】微信iOS / Android版本>=8.0.61，支持在成功打开礼物并回到小程序时，触发成功回调。"
+reference = "https://developers.weixin.qq.com/miniprogram/dev/component/store-gift.html"
+deprecated = false
+
+[[component.event]]
+name = "error"
+description = "打开礼物失败的回调，event.detail={code,message}。"
+reference = "https://developers.weixin.qq.com/miniprogram/dev/component/store-gift.html"
+deprecated = false
+
+[[component]]
+tag-name = "store-home"
+description = "小程序内嵌微信小店首页，展示小店首页，并进行跳转交易。"
+reference = "https://developers.weixin.qq.com/miniprogram/dev/component/store-home.html"
+event = []
+deprecated = false
+
+[[component.property]]
+name = "appid"
+ty = "string"
+description = "小店appid。获取方式：[小店后台](https://store.weixin.qq.com/shop/setting/home) - 店铺管理 - 基础信息 - 账号信息 - 微信小店ID。"
+reference = "https://developers.weixin.qq.com/miniprogram/dev/component/store-home.html"
+value-option = []
+deprecated = false
+
+[[component]]
+tag-name = "store-product"
+description = "小程序内嵌微信小店商品，展示小店商品，并进行跳转交易。支持小店优选联盟带货跟佣功能。"
+reference = "https://developers.weixin.qq.com/miniprogram/dev/component/store-product.html"
+deprecated = false
+
+[[component.property]]
+name = "appid"
+ty = "string"
+description = "小店appid。获取方式：[小店后台](https://store.weixin.qq.com/shop/setting/home) - 店铺管理 - 基础信息 - 账号信息 - 微信小店ID。"
+reference = "https://developers.weixin.qq.com/miniprogram/dev/component/store-product.html"
+value-option = []
+deprecated = false
+
+[[component.property]]
+name = "product-id"
+ty = "string"
+description = "商品id。获取小店商品id，可以通过API获取([参考链接](https://developers.weixin.qq.com/doc/store/API/product/get.html))或通过[小店后台](https://store.weixin.qq.com/shop/goods/list) - 商品管理 - 商品列表 - 规格/编码获取。"
+reference = "https://developers.weixin.qq.com/miniprogram/dev/component/store-product.html"
+value-option = []
+deprecated = false
+
+[[component.property]]
+name = "product-promotion-link"
+ty = "string"
+description = "带货商品跟佣信息。若需要商品售卖时使用小店优选联盟带货跟佣功能，可以通过API获取带货商品跟佣信息([参考链接](https://developers.weixin.qq.com/doc/channels/API/windowproduct/get.html))。"
+reference = "https://developers.weixin.qq.com/miniprogram/dev/component/store-product.html"
+value-option = []
+deprecated = false
+
+[[component.property]]
+name = "media-id"
+ty = "string"
+description = "媒体文件id。可以通过API获取([参考链接](https://developers.weixin.qq.com/miniprogram/dev/platform-capabilities/business-capabilities/cooperation_shop/upload.html#%E4%B8%80%E3%80%81%E4%B8%8A%E4%BC%A0%E8%B5%84%E6%96%99))。"
+reference = "https://developers.weixin.qq.com/miniprogram/dev/component/store-product.html"
+value-option = []
+deprecated = false
+
+[[component.property]]
+name = "custom-style"
+ty = "string"
+description = "自定义样式。支持自定义的样式请查看custom-style。"
+reference = "https://developers.weixin.qq.com/miniprogram/dev/component/store-product.html"
+value-option = []
+deprecated = false
+
+[[component.property]]
+name = "custom-content"
+ty = "boolean"
+description = "开启自定义插槽。开启后可自行控制卡片内容。"
+reference = "https://developers.weixin.qq.com/miniprogram/dev/component/store-product.html"
+value-option = []
+deprecated = false
+
+[[component.property]]
+name = "open-page"
+ty = "string"
+description = "设置点击打开的页面(同时开启 custom-content 属性后生效)。"
+reference = "https://developers.weixin.qq.com/miniprogram/dev/component/store-product.html"
+deprecated = false
+
+[[component.property.value-option]]
+value = "product-detail"
+description = "商品详情页"
+deprecated = false
+
+[[component.property.value-option]]
+value = "gift-product-detail"
+description = "送礼商品详情页"
+deprecated = false
+
+[[component.property.value-option]]
+value = "buy"
+description = "下单页"
+deprecated = false
+
+[[component.property]]
+name = "logo-position"
+ty = "string"
+description = "设置小店标识的位置，不允许隐藏(同时开启 custom-content 属性后生效)。"
+reference = "https://developers.weixin.qq.com/miniprogram/dev/component/store-product.html"
+deprecated = false
+
+[[component.property.value-option]]
+value = "bottom-left"
+description = "左下方"
+deprecated = false
+
+[[component.property.value-option]]
+value = "bottom-right"
+description = "右下方"
+deprecated = false
+
+[[component.event]]
+name = "entersuccess"
+description = "跳转小店成功的回调。"
+reference = "https://developers.weixin.qq.com/miniprogram/dev/component/store-product.html"
+deprecated = false
+
+[[component.event]]
+name = "entererror"
+description = "跳转小店失败的回调，event.detail={code,message}。"
+reference = "https://developers.weixin.qq.com/miniprogram/dev/component/store-product.html"
 deprecated = false
 
 [[component]]
@@ -4952,6 +5343,28 @@ value = "easeInOutCubic"
 description = "缓入缓出动画"
 deprecated = false
 
+[[component.property]]
+name = "direction"
+ty = "string"
+description = "指定 swiper 滑动方向"
+reference = "https://developers.weixin.qq.com/miniprogram/dev/component/swiper.html"
+deprecated = false
+
+[[component.property.value-option]]
+value = "all"
+description = "默认"
+deprecated = false
+
+[[component.property.value-option]]
+value = "positive"
+description = "只允许正向滑动，vertical 为 true 时，表示向下滑动，为 false 时，表示向右滑动"
+deprecated = false
+
+[[component.property.value-option]]
+value = "negative"
+description = "只允许负向滑动，vertical 为 true 时，表示向上滑动，为 false 时，表示向左滑动"
+deprecated = false
+
 [[component.event]]
 name = "change"
 description = "current 改变时会触发 change 事件，event.detail = {current, source}"
@@ -5085,7 +5498,7 @@ deprecated = false
 [[component.property]]
 name = "placeholder-style"
 ty = "string"
-description = "指定 placeholder 的样式，目前仅支持color,font-size和font-weight"
+description = "指定 placeholder 的样式，目前仅支持color,font-size,font-weight,line-height"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/textarea.html"
 value-option = []
 deprecated = false
@@ -5234,7 +5647,7 @@ deprecated = false
 [[component.property]]
 name = "adjust-keyboard-to"
 ty = "boolean"
-description = "键盘对齐位置"
+description = "键盘对齐位置。"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/textarea.html"
 deprecated = false
 
@@ -5570,7 +5983,7 @@ deprecated = false
 [[component.property]]
 name = "show-casting-button"
 ty = "boolean"
-description = "显示投屏按钮。安卓在同层渲染下生效，支持 DLNA 协议；iOS 支持 AirPlay 和 DLNA 协议。可以通过[VideoContext](https://developers.weixin.qq.com/miniprogram/dev/api/media/video/VideoContext.html)的相关方法进行操作。"
+description = "显示投屏按钮。安卓在同层渲染下生效，支持 DLNA 协议；iOS 支持 AirPlay 和 DLNA 协议；鸿蒙 OS 暂不支持。可以通过[VideoContext](https://developers.weixin.qq.com/miniprogram/dev/api/media/video/VideoContext.html)的相关方法进行操作。"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/video.html"
 value-option = []
 deprecated = false
@@ -5578,7 +5991,7 @@ deprecated = false
 [[component.property]]
 name = "picture-in-picture-mode"
 ty = "string"
-description = '设置小窗模式： push, pop，空字符串或通过数组形式设置多种模式（如： ["push", "pop"]）'
+description = '设置小窗模式： push, pop，空字符串或通过数组形式设置多种模式（如： ["push", "pop"]）。鸿蒙 OS 暂不支持'
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/video.html"
 deprecated = false
 
@@ -5606,7 +6019,7 @@ value-option = []
 deprecated = false
 
 [[component.property]]
-name = "picture-in-picture-init-position="
+name = "picture-in-picture-init-position"
 ty = "string"
 description = "小窗模式下小窗的初始显示位置，格式为 (alignment, y)，其中 alignment 表示小窗吸附屏幕左侧还是右侧，可选值为 left、right，y 代表小窗最顶部所在的屏幕高度百分比"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/video.html"
@@ -5640,7 +6053,7 @@ deprecated = false
 [[component.property]]
 name = "show-background-playback-button"
 ty = "boolean"
-description = "是否展示后台音频播放按钮"
+description = "是否展示后台音频播放按钮。鸿蒙 OS 暂不支持。基础库 3.6.0 开始默认值为 true。"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/video.html"
 value-option = []
 deprecated = false
@@ -5798,19 +6211,19 @@ deprecated = false
 
 [[component.event]]
 name = "castinguserselect"
-description = '用户选择投屏设备时触发 detail = { state: "success"/"fail" }'
+description = '用户选择投屏设备时触发 detail = { state: "success"/"fail" }。鸿蒙 OS 暂不支持'
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/video.html"
 deprecated = false
 
 [[component.event]]
 name = "castingstatechange"
-description = '投屏成功/失败时触发 detail = { type, state: "success"/"fail" }'
+description = '投屏成功/失败时触发 detail = { type, state: "success"/"fail" }。鸿蒙 OS 暂不支持'
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/video.html"
 deprecated = false
 
 [[component.event]]
 name = "castinginterrupt"
-description = "投屏被中断时触发"
+description = "投屏被中断时触发。鸿蒙 OS 暂不支持"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/video.html"
 deprecated = false
 
