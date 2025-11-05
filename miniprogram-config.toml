@@ -1,3 +1,10 @@
+[glass-easel-backend-config]
+name = "wechat-miniprogram"
+description = "The backend configuration for wechat-miniprogram."
+build-timestamp = 1762334422
+major-version = 1
+minor-version = 0
+
 [[component]]
 tag-name = "ad"
 description = "Banner 广告。"
@@ -14,7 +21,7 @@ deprecated = false
 
 [[component.property]]
 name = "ad-intervals"
-ty = "string"
+ty = "number"
 description = "广告自动刷新的间隔时间，单位为秒，参数值必须大于等于30（该参数不传入时 Banner 广告不会自动刷新）"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/ad.html"
 value-option = []
@@ -70,7 +77,7 @@ deprecated = false
 
 [[component.property]]
 name = "ad-intervals"
-ty = "string"
+ty = "number"
 description = "广告自动刷新的间隔时间，单位为秒，参数值必须大于等于30（该参数不传入时 模板 广告不会自动刷新）"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/ad-custom.html"
 value-option = []
@@ -351,7 +358,7 @@ deprecated = false
 
 [[component.property]]
 name = "hover-start-time"
-ty = "string"
+ty = "number"
 description = "按住后多久出现点击态，单位毫秒"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/button.html"
 value-option = []
@@ -359,7 +366,7 @@ deprecated = false
 
 [[component.property]]
 name = "hover-stay-time"
-ty = "string"
+ty = "number"
 description = "手指松开后点击态保留时间，单位毫秒"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/button.html"
 value-option = []
@@ -943,7 +950,7 @@ deprecated = false
 
 [[component.property]]
 name = "scroll-top"
-ty = "string"
+ty = "number | string"
 description = "设置顶部滚动偏移量，仅在设置了 overflow-y: scroll 成为滚动元素后生效"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/cover-view.html"
 value-option = []
@@ -958,7 +965,7 @@ deprecated = false
 
 [[component.property]]
 name = "initial-child-size"
-ty = "string"
+ty = "number"
 description = "初始时占父容器的比例"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/draggable-sheet.html"
 value-option = []
@@ -966,7 +973,7 @@ deprecated = false
 
 [[component.property]]
 name = "min-child-size"
-ty = "string"
+ty = "number"
 description = "最小时占父容器的比例"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/draggable-sheet.html"
 value-option = []
@@ -974,7 +981,7 @@ deprecated = false
 
 [[component.property]]
 name = "max-child-size"
-ty = "string"
+ty = "number"
 description = "最大时占父容器的比例"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/draggable-sheet.html"
 value-option = []
@@ -990,7 +997,7 @@ deprecated = false
 
 [[component.property]]
 name = "snap-sizes"
-ty = "string"
+ty = "number[]"
 description = "拖拽后对齐的关键点，无需包含最小和最大值"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/draggable-sheet.html"
 value-option = []
@@ -1063,7 +1070,7 @@ deprecated = false
 
 [[component.property]]
 name = "enable-formats"
-ty = "string"
+ty = "string[]"
 description = "编辑器允许的名单内的格式"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/editor.html"
 value-option = []
@@ -1149,7 +1156,7 @@ deprecated = false
 
 [[component.property]]
 name = "report-submit-timeout"
-ty = "string"
+ty = "number"
 description = "等待一段时间（毫秒数）以确认 formId 是否生效。如果未指定这个参数，formId 有很小的概率是无效的（如遇到网络失败的情况）。指定这个参数将可以检测 formId 是否有效，以这个参数的时间作为这项检测的超时时间。如果失败，将返回 requestFormId:fail 开头的 formId"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/form.html"
 value-option = []
@@ -1235,7 +1242,7 @@ deprecated = false
 
 [[component.property]]
 name = "args"
-ty = "string"
+ty = "{ [key: string]: any }"
 description = "功能页参数，参数格式与具体功能页相关"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/functional-page-navigator.html"
 value-option = []
@@ -1267,7 +1274,7 @@ deprecated = false
 
 [[component.property]]
 name = "padding"
-ty = "string"
+ty = "any[]"
 description = "长度为 4 的数组，按 top、right、bottom、left 顺序指定内边距"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/grid-builder.html"
 value-option = []
@@ -1275,7 +1282,7 @@ deprecated = false
 
 [[component.property]]
 name = "list"
-ty = "string"
+ty = "any[]"
 description = "需要用于渲染的列表"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/grid-builder.html"
 value-option = []
@@ -1283,7 +1290,7 @@ deprecated = false
 
 [[component.property]]
 name = "child-count"
-ty = "string"
+ty = "any[]"
 description = "完整列表的长度，如果不传则取 list 的长度作为其值"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/grid-builder.html"
 value-option = []
@@ -1308,7 +1315,7 @@ deprecated = false
 
 [[component.property]]
 name = "cross-axis-count"
-ty = "string"
+ty = "number"
 description = "交叉轴元素数量"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/grid-builder.html"
 value-option = []
@@ -1316,7 +1323,7 @@ deprecated = false
 
 [[component.property]]
 name = "max-cross-axis-extent"
-ty = "string"
+ty = "number"
 description = "交叉轴元素最大范围"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/grid-builder.html"
 value-option = []
@@ -1324,7 +1331,7 @@ deprecated = false
 
 [[component.property]]
 name = "main-axis-gap"
-ty = "string"
+ty = "number"
 description = "主轴方向间隔"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/grid-builder.html"
 value-option = []
@@ -1332,7 +1339,7 @@ deprecated = false
 
 [[component.property]]
 name = "cross-axis-gap"
-ty = "string"
+ty = "number"
 description = "交叉轴方向间隔"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/grid-builder.html"
 value-option = []
@@ -1376,7 +1383,7 @@ deprecated = false
 
 [[component.property]]
 name = "cross-axis-count"
-ty = "string"
+ty = "number"
 description = "交叉轴元素数量"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/grid-view.html"
 value-option = []
@@ -1384,7 +1391,7 @@ deprecated = false
 
 [[component.property]]
 name = "max-cross-axis-extent"
-ty = "string"
+ty = "number"
 description = "交叉轴元素最大范围"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/grid-view.html"
 value-option = []
@@ -1392,7 +1399,7 @@ deprecated = false
 
 [[component.property]]
 name = "main-axis-gap"
-ty = "string"
+ty = "number"
 description = "主轴方向间隔"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/grid-view.html"
 value-option = []
@@ -1400,7 +1407,7 @@ deprecated = false
 
 [[component.property]]
 name = "cross-axis-gap"
-ty = "string"
+ty = "number"
 description = "交叉轴方向间隔"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/grid-view.html"
 value-option = []
@@ -1408,7 +1415,7 @@ deprecated = false
 
 [[component.property]]
 name = "padding"
-ty = "string"
+ty = "any[]"
 description = "长度为 4 的数组，按 top、right、bottom、left 顺序指定内边距"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/grid-view.html"
 value-option = []
@@ -1431,7 +1438,7 @@ deprecated = false
 
 [[component.property]]
 name = "size"
-ty = "string"
+ty = "number | string"
 description = "icon的大小，单位默认为px，[2.4.0](https://developers.weixin.qq.com/miniprogram/analysis/experience/compatibility.html)起支持传入单位(rpx/px)，[2.21.3](https://developers.weixin.qq.com/miniprogram/analysis/experience/compatibility.html)起支持传入其余单位(rem 等)。"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/icon.html"
 value-option = []
@@ -1646,7 +1653,7 @@ deprecated = false
 
 [[component.property]]
 name = "maxlength"
-ty = "string"
+ty = "number"
 description = "最大输入长度，设置为 -1 的时候不限制最大长度"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/input.html"
 value-option = []
@@ -1654,7 +1661,7 @@ deprecated = false
 
 [[component.property]]
 name = "cursor-spacing"
-ty = "string"
+ty = "number"
 description = "指定光标与键盘的距离，取 input 距离底部的距离和 cursor-spacing 指定的距离的最小值作为光标与键盘的距离"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/input.html"
 value-option = []
@@ -1726,7 +1733,7 @@ deprecated = false
 
 [[component.property]]
 name = "cursor"
-ty = "string"
+ty = "number"
 description = "指定focus时的光标位置"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/input.html"
 value-option = []
@@ -1742,7 +1749,7 @@ deprecated = false
 
 [[component.property]]
 name = "selection-start"
-ty = "string"
+ty = "number"
 description = "光标起始位置，自动聚集时有效，需与selection-end搭配使用"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/input.html"
 value-option = []
@@ -1750,7 +1757,7 @@ deprecated = false
 
 [[component.property]]
 name = "selection-end"
-ty = "string"
+ty = "number"
 description = "光标结束位置，自动聚集时有效，需与selection-start搭配使用"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/input.html"
 value-option = []
@@ -1782,7 +1789,7 @@ deprecated = false
 
 [[component.property]]
 name = "safe-password-length"
-ty = "string"
+ty = "number"
 description = "安全键盘输入密码长度。鸿蒙 OS 暂不支持"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/input.html"
 value-option = []
@@ -1790,7 +1797,7 @@ deprecated = false
 
 [[component.property]]
 name = "safe-password-time-stamp"
-ty = "string"
+ty = "number"
 description = "安全键盘加密时间戳。鸿蒙 OS 暂不支持"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/input.html"
 value-option = []
@@ -1898,7 +1905,7 @@ deprecated = false
 
 [[component.property]]
 name = "padding"
-ty = "string"
+ty = "any[]"
 description = "长度为 4 的数组，按 top、right、bottom、left 顺序指定内边距"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/list-builder.html"
 value-option = []
@@ -1923,7 +1930,7 @@ deprecated = false
 
 [[component.property]]
 name = "list"
-ty = "string"
+ty = "any[]"
 description = "需要用于渲染的列表"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/list-builder.html"
 value-option = []
@@ -1931,7 +1938,7 @@ deprecated = false
 
 [[component.property]]
 name = "child-count"
-ty = "string"
+ty = "any[]"
 description = "完整列表的长度，如果不传则取 list 的长度作为其值"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/list-builder.html"
 value-option = []
@@ -1939,7 +1946,7 @@ deprecated = false
 
 [[component.property]]
 name = "child-height"
-ty = "string"
+ty = "any[]"
 description = "列表项的高度，当 type 为 static 时必须传入"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/list-builder.html"
 value-option = []
@@ -1947,7 +1954,7 @@ deprecated = false
 
 [[component.property]]
 name = "initial-child-count"
-ty = "string"
+ty = "number"
 description = "首次渲染时渲染的列表项数量，用于减少首次渲染时的白屏时长。不传则首屏也根据布局结果按需渲染"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/list-builder.html"
 value-option = []
@@ -1974,7 +1981,7 @@ deprecated = false
 
 [[component.property]]
 name = "padding"
-ty = "string"
+ty = "any[]"
 description = "长度为 4 的数组，按 top、right、bottom、left 顺序指定内边距"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/list-view.html"
 value-option = []
@@ -2088,7 +2095,7 @@ deprecated = false
 
 [[component.property]]
 name = "min-cache"
-ty = "string"
+ty = "number"
 description = "最小缓冲区，单位s（RTC 模式推荐 0.2s）"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/live-player.html"
 value-option = []
@@ -2096,7 +2103,7 @@ deprecated = false
 
 [[component.property]]
 name = "max-cache"
-ty = "string"
+ty = "number"
 description = "最大缓冲区，单位s（RTC 模式推荐 0.8s）。缓冲区用来抵抗网络波动，缓冲数据越多，网络抗性越好，但时延越大。"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/live-player.html"
 value-option = []
@@ -2137,7 +2144,7 @@ deprecated = false
 
 [[component.property]]
 name = "picture-in-picture-mode"
-ty = "string"
+ty = "string | any[]"
 description = '设置小窗模式： push, pop，空字符串或通过数组形式设置多种模式（如： ["push", "pop"]）'
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/live-player.html"
 deprecated = false
@@ -2379,7 +2386,7 @@ deprecated = false
 
 [[component.property]]
 name = "beauty"
-ty = "string"
+ty = "number"
 description = "美颜，取值范围 0-9 ，0 表示关闭。鸿蒙 OS 暂不支持"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/live-pusher.html"
 value-option = []
@@ -2387,7 +2394,7 @@ deprecated = false
 
 [[component.property]]
 name = "whiteness"
-ty = "string"
+ty = "number"
 description = "美白，取值范围 0-9 ，0 表示关闭"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/live-pusher.html"
 value-option = []
@@ -2403,7 +2410,7 @@ deprecated = false
 
 [[component.property]]
 name = "min-bitrate"
-ty = "string"
+ty = "number"
 description = "最小码率"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/live-pusher.html"
 value-option = []
@@ -2411,7 +2418,7 @@ deprecated = false
 
 [[component.property]]
 name = "max-bitrate"
-ty = "string"
+ty = "number"
 description = "最大码率"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/live-pusher.html"
 value-option = []
@@ -2505,7 +2512,7 @@ deprecated = false
 
 [[component.property]]
 name = "audio-reverb-type"
-ty = "string"
+ty = "number"
 description = "音频混响类型"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/live-pusher.html"
 deprecated = false
@@ -2598,7 +2605,7 @@ deprecated = false
 
 [[component.property]]
 name = "video-width"
-ty = "string"
+ty = "number"
 description = "上推的视频流的分辨率宽度"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/live-pusher.html"
 value-option = []
@@ -2606,7 +2613,7 @@ deprecated = false
 
 [[component.property]]
 name = "video-height"
-ty = "string"
+ty = "number"
 description = "上推的视频流的分辨率高度"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/live-pusher.html"
 value-option = []
@@ -2693,7 +2700,7 @@ deprecated = false
 
 [[component.property]]
 name = "picture-in-picture-mode"
-ty = "string"
+ty = "string | any[]"
 description = '设置小窗模式： push, pop，空字符串或通过数组形式设置多种模式（如： ["push", "pop"]）'
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/live-pusher.html"
 deprecated = false
@@ -2715,7 +2722,7 @@ deprecated = false
 
 [[component.property]]
 name = "voice-changer-type"
-ty = "string"
+ty = "number"
 description = "0：关闭变声；1：熊孩子；2：萝莉；3：大叔；4：重金属；6：外国人；7：困兽；8：死肥仔；9：强电流；10：重机械；11：空灵"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/live-pusher.html"
 value-option = []
@@ -2731,7 +2738,7 @@ deprecated = false
 
 [[component.property]]
 name = "skin-whiteness"
-ty = "string"
+ty = "number"
 description = "自定义特效美白效果，取值 0~1。需要开启 `custom-effect`"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/live-pusher.html"
 value-option = []
@@ -2739,7 +2746,7 @@ deprecated = false
 
 [[component.property]]
 name = "skin-smoothness"
-ty = "string"
+ty = "number"
 description = "自定义特效磨皮效果，取值 0~1。需要开启 `custom-effect`"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/live-pusher.html"
 value-option = []
@@ -2747,7 +2754,7 @@ deprecated = false
 
 [[component.property]]
 name = "face-thinness"
-ty = "string"
+ty = "number"
 description = "自定义特效瘦脸效果，取值 0~1。需要开启 `custom-effect`"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/live-pusher.html"
 value-option = []
@@ -2755,7 +2762,7 @@ deprecated = false
 
 [[component.property]]
 name = "eye-bigness"
-ty = "string"
+ty = "number"
 description = "自定义特效大眼效果，取值 0~1。需要开启 `custom-effect`"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/live-pusher.html"
 value-option = []
@@ -2763,7 +2770,7 @@ deprecated = false
 
 [[component.property]]
 name = "fps"
-ty = "string"
+ty = "number"
 description = "帧率，有效值为 1~30"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/live-pusher.html"
 value-option = []
@@ -2879,7 +2886,7 @@ deprecated = false
 
 [[component.property]]
 name = "longitude"
-ty = "string"
+ty = "number"
 description = "中心经度"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/map.html"
 value-option = []
@@ -2887,7 +2894,7 @@ deprecated = false
 
 [[component.property]]
 name = "latitude"
-ty = "string"
+ty = "number"
 description = "中心纬度"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/map.html"
 value-option = []
@@ -2895,7 +2902,7 @@ deprecated = false
 
 [[component.property]]
 name = "scale"
-ty = "string"
+ty = "number"
 description = "缩放级别，取值范围为3-20"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/map.html"
 value-option = []
@@ -2903,7 +2910,7 @@ deprecated = false
 
 [[component.property]]
 name = "min-scale"
-ty = "string"
+ty = "number"
 description = "最小缩放级别"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/map.html"
 value-option = []
@@ -2911,7 +2918,7 @@ deprecated = false
 
 [[component.property]]
 name = "max-scale"
-ty = "string"
+ty = "number"
 description = "最大缩放级别"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/map.html"
 value-option = []
@@ -2919,7 +2926,7 @@ deprecated = false
 
 [[component.property]]
 name = "markers"
-ty = "string"
+ty = "marker[]"
 description = "标记点"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/map.html"
 value-option = []
@@ -2927,7 +2934,7 @@ deprecated = false
 
 [[component.property]]
 name = "covers"
-ty = "string"
+ty = "cover[]"
 description = "**即将移除，请使用 markers**"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/map.html"
 value-option = []
@@ -2935,7 +2942,7 @@ deprecated = false
 
 [[component.property]]
 name = "polyline"
-ty = "string"
+ty = "polyline[]"
 description = "路线"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/map.html"
 value-option = []
@@ -2943,7 +2950,7 @@ deprecated = false
 
 [[component.property]]
 name = "circles"
-ty = "string"
+ty = "circle[]"
 description = "圆"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/map.html"
 value-option = []
@@ -2951,7 +2958,7 @@ deprecated = false
 
 [[component.property]]
 name = "controls"
-ty = "string"
+ty = "control[]"
 description = "控件（即将废弃，建议使用 [cover-view](https://developers.weixin.qq.com/miniprogram/dev/component/cover-view.html) 代替）"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/map.html"
 value-option = []
@@ -2959,7 +2966,7 @@ deprecated = false
 
 [[component.property]]
 name = "include-points"
-ty = "string"
+ty = "point[]"
 description = "缩放视野以包含所有给定的坐标点"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/map.html"
 value-option = []
@@ -2975,7 +2982,7 @@ deprecated = false
 
 [[component.property]]
 name = "polygons"
-ty = "string"
+ty = "polygon[]"
 description = "多边形"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/map.html"
 value-option = []
@@ -2991,7 +2998,7 @@ deprecated = false
 
 [[component.property]]
 name = "layer-style"
-ty = "string"
+ty = "number"
 description = "地图能力【个性化地图】配置的 style"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/map.html"
 value-option = []
@@ -2999,7 +3006,7 @@ deprecated = false
 
 [[component.property]]
 name = "rotate"
-ty = "string"
+ty = "number"
 description = "旋转角度，范围 0 ~ 360, 地图正北和设备 y 轴角度的夹角"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/map.html"
 value-option = []
@@ -3007,7 +3014,7 @@ deprecated = false
 
 [[component.property]]
 name = "skew"
-ty = "string"
+ty = "number"
 description = "倾斜角度，范围 0 ~ 40 , 关于 z 轴的倾角"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/map.html"
 value-option = []
@@ -3111,7 +3118,7 @@ deprecated = false
 
 [[component.property]]
 name = "setting"
-ty = "string"
+ty = "{ [key: string]: any }"
 description = "配置项"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/map.html"
 value-option = []
@@ -3213,7 +3220,7 @@ deprecated = false
 
 [[component.property]]
 name = "min-width"
-ty = "string"
+ty = "number"
 description = "页面最小宽度（ px 为单位）"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/match-media.html"
 value-option = []
@@ -3221,7 +3228,7 @@ deprecated = false
 
 [[component.property]]
 name = "max-width"
-ty = "string"
+ty = "number"
 description = "页面最大宽度（ px 为单位）"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/match-media.html"
 value-option = []
@@ -3229,7 +3236,7 @@ deprecated = false
 
 [[component.property]]
 name = "width"
-ty = "string"
+ty = "number"
 description = "页面宽度（ px 为单位）"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/match-media.html"
 value-option = []
@@ -3237,7 +3244,7 @@ deprecated = false
 
 [[component.property]]
 name = "min-height"
-ty = "string"
+ty = "number"
 description = "页面最小高度（ px 为单位）"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/match-media.html"
 value-option = []
@@ -3245,7 +3252,7 @@ deprecated = false
 
 [[component.property]]
 name = "max-height"
-ty = "string"
+ty = "number"
 description = "页面最大高度（ px 为单位）"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/match-media.html"
 value-option = []
@@ -3253,7 +3260,7 @@ deprecated = false
 
 [[component.property]]
 name = "height"
-ty = "string"
+ty = "number"
 description = "页面高度（ px 为单位）"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/match-media.html"
 value-option = []
@@ -3276,7 +3283,7 @@ deprecated = false
 
 [[component.property]]
 name = "scale-area"
-ty = "string"
+ty = "boolean"
 description = "当里面的movable-view设置为支持双指缩放时，设置此值可将缩放手势生效区域修改为整个movable-area"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/movable-area.html"
 value-option = []
@@ -3314,7 +3321,7 @@ deprecated = false
 
 [[component.property]]
 name = "x"
-ty = "string"
+ty = "number | string"
 description = "定义x轴方向的偏移，如果x的值不在可移动范围内，会自动移动到可移动范围；改变x的值会触发动画；单位支持px（默认）、rpx；"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/movable-view.html"
 value-option = []
@@ -3322,7 +3329,7 @@ deprecated = false
 
 [[component.property]]
 name = "y"
-ty = "string"
+ty = "number | string"
 description = "定义y轴方向的偏移，如果y的值不在可移动范围内，会自动移动到可移动范围；改变y的值会触发动画；单位支持px（默认）、rpx；"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/movable-view.html"
 value-option = []
@@ -3330,7 +3337,7 @@ deprecated = false
 
 [[component.property]]
 name = "damping"
-ty = "string"
+ty = "number"
 description = "阻尼系数，用于控制x或y改变时的动画和过界回弹的动画，值越大移动越快"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/movable-view.html"
 value-option = []
@@ -3338,7 +3345,7 @@ deprecated = false
 
 [[component.property]]
 name = "friction"
-ty = "string"
+ty = "number"
 description = "摩擦系数，用于控制惯性滑动的动画，值越大摩擦力越大，滑动越快停止；必须大于0，否则会被设置成默认值"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/movable-view.html"
 value-option = []
@@ -3362,7 +3369,7 @@ deprecated = false
 
 [[component.property]]
 name = "scale-min"
-ty = "string"
+ty = "number"
 description = "定义缩放倍数最小值"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/movable-view.html"
 value-option = []
@@ -3370,7 +3377,7 @@ deprecated = false
 
 [[component.property]]
 name = "scale-max"
-ty = "string"
+ty = "number"
 description = "定义缩放倍数最大值"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/movable-view.html"
 value-option = []
@@ -3378,7 +3385,7 @@ deprecated = false
 
 [[component.property]]
 name = "scale-value"
-ty = "string"
+ty = "number"
 description = "定义缩放倍数，取值范围为 0.1 - 10"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/movable-view.html"
 value-option = []
@@ -3460,7 +3467,7 @@ deprecated = false
 
 [[component.property]]
 name = "color-animation-duration"
-ty = "string"
+ty = "number"
 description = "改变导航栏颜色时的动画时长，默认为 `0` （即没有动画效果）"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/navigation-bar.html"
 value-option = []
@@ -3545,7 +3552,7 @@ deprecated = false
 
 [[component.property]]
 name = "delta"
-ty = "string"
+ty = "number"
 description = "当 open-type 为 'navigateBack' 时有效，表示回退的层数"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/navigator.html"
 value-option = []
@@ -3569,7 +3576,7 @@ deprecated = false
 
 [[component.property]]
 name = "extra-data"
-ty = "string"
+ty = "{ [key: string]: any }"
 description = '当`target="miniProgram"`且`open-type="navigate/navigateBack"`时有效，需要传递给目标小程序的数据，目标小程序可在 `App.onLaunch()`，`App.onShow()` 中获取到这份数据。[详情](../framework/app-service/app.md)'
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/navigator.html"
 value-option = []
@@ -3623,7 +3630,7 @@ deprecated = false
 
 [[component.property]]
 name = "hover-start-time"
-ty = "string"
+ty = "number"
 description = "按住后多久出现点击态，单位毫秒"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/navigator.html"
 value-option = []
@@ -3631,7 +3638,7 @@ deprecated = false
 
 [[component.property]]
 name = "hover-stay-time"
-ty = "string"
+ty = "number"
 description = "手指松开后点击态保留时间，单位毫秒"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/navigator.html"
 value-option = []
@@ -3670,7 +3677,7 @@ deprecated = false
 
 [[component.property]]
 name = "offset-top"
-ty = "string"
+ty = "number"
 description = "滚动目标距离顶部的距离(px)。在外层 scroll-view 滚动时此组件会在主轴方向会逐渐撑开，直到此组件顶部与视窗顶部距离为该属性值时才开始里层 scroll-view 的滚动。默认为 0，即表示此组件撑开到顶部与视窗顶部齐平时才开始里层 scroll-view 的滚动。"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/nested-scroll-body.html"
 value-option = []
@@ -3736,7 +3743,7 @@ deprecated = false
 
 [[component.property]]
 name = "closed-elevation"
-ty = "string"
+ty = "number"
 description = "初始容器影深大小"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/open-container.html"
 value-option = []
@@ -3744,7 +3751,7 @@ deprecated = false
 
 [[component.property]]
 name = "closed-border-radius"
-ty = "string"
+ty = "number"
 description = "初始容器圆角大小"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/open-container.html"
 value-option = []
@@ -3768,7 +3775,7 @@ deprecated = false
 
 [[component.property]]
 name = "open-elevation"
-ty = "string"
+ty = "number"
 description = "打开状态下容器影深大小"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/open-container.html"
 value-option = []
@@ -3776,7 +3783,7 @@ deprecated = false
 
 [[component.property]]
 name = "open-border-radius"
-ty = "string"
+ty = "number"
 description = "打开状态下容器圆角大小"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/open-container.html"
 value-option = []
@@ -3784,7 +3791,7 @@ deprecated = false
 
 [[component.property]]
 name = "transition-duration"
-ty = "string"
+ty = "number"
 description = "动画时长"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/open-container.html"
 value-option = []
@@ -3938,7 +3945,7 @@ deprecated = false
 
 [[component.property]]
 name = "index"
-ty = "string"
+ty = "number"
 description = "序号"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/open-data-item.html"
 value-option = []
@@ -3965,7 +3972,7 @@ deprecated = false
 
 [[component.property]]
 name = "members"
-ty = "string"
+ty = "string[]"
 description = "群成员group_openid列表"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/open-data-list.html"
 value-option = []
@@ -3991,7 +3998,7 @@ deprecated = false
 
 [[component.property]]
 name = "duration"
-ty = "string"
+ty = "number"
 description = "动画时长，单位毫秒"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/page-container.html"
 value-option = []
@@ -3999,7 +4006,7 @@ deprecated = false
 
 [[component.property]]
 name = "z-index"
-ty = "string"
+ty = "number"
 description = "z-index 层级"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/page-container.html"
 value-option = []
@@ -4250,7 +4257,7 @@ deprecated = false
 
 [[component.property]]
 name = "value"
-ty = "string"
+ty = "number[]"
 description = "数组中的数字依次表示 picker-view 内的 picker-view-column 选择的第几项（下标从 0 开始），数字大于 picker-view-column 可选项长度时，选择最后一项。"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/picker-view.html"
 value-option = []
@@ -4306,7 +4313,7 @@ deprecated = false
 
 [[component.property]]
 name = "percent"
-ty = "string"
+ty = "number"
 description = "百分比0~100"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/progress.html"
 value-option = []
@@ -4322,7 +4329,7 @@ deprecated = false
 
 [[component.property]]
 name = "border-radius"
-ty = "string"
+ty = "number | string"
 description = "圆角大小"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/progress.html"
 value-option = []
@@ -4330,7 +4337,7 @@ deprecated = false
 
 [[component.property]]
 name = "font-size"
-ty = "string"
+ty = "number | string"
 description = "右侧百分比字体大小"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/progress.html"
 value-option = []
@@ -4338,7 +4345,7 @@ deprecated = false
 
 [[component.property]]
 name = "stroke-width"
-ty = "string"
+ty = "number | string"
 description = "进度条线的宽度"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/progress.html"
 value-option = []
@@ -4386,7 +4393,7 @@ deprecated = false
 
 [[component.property]]
 name = "duration"
-ty = "string"
+ty = "number"
 description = "进度增加1%所需毫秒数"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/progress.html"
 value-option = []
@@ -4459,7 +4466,7 @@ deprecated = false
 
 [[component.property]]
 name = "nodes"
-ty = "string"
+ty = "any[] | string"
 description = "节点列表/HTML String"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/rich-text.html"
 value-option = []
@@ -4534,7 +4541,7 @@ deprecated = false
 
 [[component.property]]
 name = "upper-threshold"
-ty = "string"
+ty = "number | string"
 description = "距顶部/左边多远时，触发 scrolltoupper 事件"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/scroll-view.html"
 value-option = []
@@ -4542,7 +4549,7 @@ deprecated = false
 
 [[component.property]]
 name = "lower-threshold"
-ty = "string"
+ty = "number | string"
 description = "距底部/右边多远时，触发 scrolltolower 事件"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/scroll-view.html"
 value-option = []
@@ -4550,7 +4557,7 @@ deprecated = false
 
 [[component.property]]
 name = "scroll-top"
-ty = "string"
+ty = "number | string"
 description = "设置竖向滚动条位置"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/scroll-view.html"
 value-option = []
@@ -4558,7 +4565,7 @@ deprecated = false
 
 [[component.property]]
 name = "scroll-left"
-ty = "string"
+ty = "number | string"
 description = "设置横向滚动条位置"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/scroll-view.html"
 value-option = []
@@ -4574,7 +4581,7 @@ deprecated = false
 
 [[component.property]]
 name = "scroll-into-view-offset"
-ty = "string"
+ty = "number"
 description = "跳转到 scroll-into-view 目标节点时的额外偏移。skyline 自 3.1.0 版本开始支持，webview 自 3.6.0 版本开始支持。"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/scroll-view.html"
 value-option = []
@@ -4614,7 +4621,7 @@ deprecated = false
 
 [[component.property]]
 name = "refresher-threshold"
-ty = "string"
+ty = "number"
 description = "设置自定义下拉刷新阈值"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/scroll-view.html"
 value-option = []
@@ -4786,7 +4793,7 @@ deprecated = false
 
 [[component.property]]
 name = "duration"
-ty = "string"
+ty = "number"
 description = "动画时长，单位毫秒"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/share-element.html"
 value-option = []
@@ -4808,7 +4815,7 @@ deprecated = false
 
 [[component.property]]
 name = "min"
-ty = "string"
+ty = "number"
 description = "最小值"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/slider.html"
 value-option = []
@@ -4816,7 +4823,7 @@ deprecated = false
 
 [[component.property]]
 name = "max"
-ty = "string"
+ty = "number"
 description = "最大值"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/slider.html"
 value-option = []
@@ -4824,7 +4831,7 @@ deprecated = false
 
 [[component.property]]
 name = "step"
-ty = "string"
+ty = "number"
 description = "步长，取值必须大于 0，并且可被(max - min)整除"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/slider.html"
 value-option = []
@@ -4840,7 +4847,7 @@ deprecated = false
 
 [[component.property]]
 name = "value"
-ty = "string"
+ty = "number"
 description = "当前取值"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/slider.html"
 value-option = []
@@ -4880,7 +4887,7 @@ deprecated = false
 
 [[component.property]]
 name = "block-size"
-ty = "string"
+ty = "number"
 description = "滑块的大小，取值范围为 12 - 28"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/slider.html"
 value-option = []
@@ -4946,7 +4953,7 @@ deprecated = false
 
 [[component.property]]
 name = "offset-top"
-ty = "string"
+ty = "number"
 description = "吸顶时与视窗顶部的距离(px)"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/sticky-header.html"
 value-option = []
@@ -4954,7 +4961,7 @@ deprecated = false
 
 [[component.property]]
 name = "allow-overlapping"
-ty = "string"
+ty = "boolean"
 description = "是否允许与前一个 sticky-header 重叠"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/sticky-header.html"
 value-option = []
@@ -4962,7 +4969,7 @@ deprecated = false
 
 [[component.property]]
 name = "padding"
-ty = "string"
+ty = "any[]"
 description = "长度为 4 的数组，按 top、right、bottom、left 顺序指定内边距(px)"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/sticky-header.html"
 value-option = []
@@ -4991,7 +4998,7 @@ deprecated = false
 
 [[component.property]]
 name = "padding"
-ty = "string"
+ty = "any[]"
 description = "长度为 4 的数组，按 top、right、bottom、left 顺序指定内边距"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/sticky-section.html"
 value-option = []
@@ -5021,7 +5028,7 @@ deprecated = false
 
 [[component.property]]
 name = "custom-style"
-ty = "string"
+ty = "{ [key: string]: any }"
 description = "自定义样式。支持自定义的样式请查看custom-style。"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/store-coupon.html"
 value-option = []
@@ -5144,7 +5151,7 @@ deprecated = false
 
 [[component.property]]
 name = "custom-style"
-ty = "string"
+ty = "{ [key: string]: any }"
 description = "自定义样式。支持自定义的样式请查看custom-style。"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/store-product.html"
 value-option = []
@@ -5249,7 +5256,7 @@ deprecated = false
 
 [[component.property]]
 name = "current"
-ty = "string"
+ty = "number"
 description = "当前所在滑块的 index"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/swiper.html"
 value-option = []
@@ -5257,7 +5264,7 @@ deprecated = false
 
 [[component.property]]
 name = "interval"
-ty = "string"
+ty = "number"
 description = "自动切换时间间隔"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/swiper.html"
 value-option = []
@@ -5265,7 +5272,7 @@ deprecated = false
 
 [[component.property]]
 name = "duration"
-ty = "string"
+ty = "number"
 description = "滑动动画时长"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/swiper.html"
 value-option = []
@@ -5289,7 +5296,7 @@ deprecated = false
 
 [[component.property]]
 name = "display-multiple-items"
-ty = "string"
+ty = "number"
 description = "同时显示的滑块数量"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/swiper.html"
 value-option = []
@@ -5513,7 +5520,7 @@ deprecated = false
 
 [[component.property]]
 name = "maxlength"
-ty = "string"
+ty = "number"
 description = "最大输入长度，设置为 -1 的时候不限制最大长度"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/textarea.html"
 value-option = []
@@ -5545,7 +5552,7 @@ deprecated = false
 
 [[component.property]]
 name = "cursor-spacing"
-ty = "string"
+ty = "number"
 description = "指定光标与键盘的距离。取`textarea`距离底部的距离和`cursor-spacing`指定的距离的最小值作为光标与键盘的距离"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/textarea.html"
 value-option = []
@@ -5553,7 +5560,7 @@ deprecated = false
 
 [[component.property]]
 name = "cursor"
-ty = "string"
+ty = "number"
 description = "指定focus时的光标位置"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/textarea.html"
 value-option = []
@@ -5561,7 +5568,7 @@ deprecated = false
 
 [[component.property]]
 name = "selection-start"
-ty = "string"
+ty = "number"
 description = "光标起始位置，自动聚集时有效，需与`selection-end`搭配使用"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/textarea.html"
 value-option = []
@@ -5569,7 +5576,7 @@ deprecated = false
 
 [[component.property]]
 name = "selection-end"
-ty = "string"
+ty = "number"
 description = "光标结束位置，自动聚集时有效，需与`selection-start`搭配使用"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/textarea.html"
 value-option = []
@@ -5713,7 +5720,7 @@ deprecated = false
 
 [[component.property]]
 name = "duration"
-ty = "string"
+ty = "number"
 description = "指定视频时长"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/video.html"
 value-option = []
@@ -5729,7 +5736,7 @@ deprecated = false
 
 [[component.property]]
 name = "danmu-list"
-ty = "string"
+ty = "object[]"
 description = "弹幕列表"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/video.html"
 value-option = []
@@ -5777,7 +5784,7 @@ deprecated = false
 
 [[component.property]]
 name = "initial-time"
-ty = "string"
+ty = "number"
 description = "指定视频初始播放位置"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/video.html"
 value-option = []
@@ -5793,7 +5800,7 @@ deprecated = false
 
 [[component.property]]
 name = "direction"
-ty = "string"
+ty = "number"
 description = "设置全屏时视频的方向，不指定则根据宽高比自动判断"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/video.html"
 deprecated = false
@@ -5990,7 +5997,7 @@ deprecated = false
 
 [[component.property]]
 name = "picture-in-picture-mode"
-ty = "string"
+ty = "string | any[]"
 description = '设置小窗模式： push, pop，空字符串或通过数组形式设置多种模式（如： ["push", "pop"]）。鸿蒙 OS 暂不支持'
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/video.html"
 deprecated = false
@@ -6125,7 +6132,7 @@ deprecated = false
 
 [[component.property]]
 name = "preferred-peak-bit-rate"
-ty = "string"
+ty = "number"
 description = "指定码率上界，单位为比特每秒"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/video.html"
 value-option = []
@@ -6252,7 +6259,7 @@ deprecated = false
 
 [[component.property]]
 name = "hover-start-time"
-ty = "string"
+ty = "number"
 description = "按住后多久出现点击态，单位毫秒"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/view.html"
 value-option = []
@@ -6260,7 +6267,7 @@ deprecated = false
 
 [[component.property]]
 name = "hover-stay-time"
-ty = "string"
+ty = "number"
 description = "手指松开后点击态保留时间，单位毫秒"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/view.html"
 value-option = []
