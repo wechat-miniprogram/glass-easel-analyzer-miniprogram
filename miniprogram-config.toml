@@ -2642,17 +2642,17 @@ value-option = []
 deprecated = false
 
 [[component.property]]
-name = "placeholder-class"
+name = "worklet:onkeyboardheightchange"
 ty = "string"
-description = "指定 placeholder 的样式类"
+description = "键盘高度变化时触发。event.detail = {height: height, pageBottomPadding: pageBottomPadding}； height: 键盘高度，pageBottomPadding: 页面上推高度"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/input.html"
 value-option = []
 deprecated = false
 
 [[component.property]]
-name = "worklet:onkeyboardheightchange"
+name = "placeholder-class"
 ty = "string"
-description = "键盘高度变化时触发。event.detail = {height: height, pageBottomPadding: pageBottomPadding}； height: 键盘高度，pageBottomPadding: 页面上推高度"
+description = "指定 placeholder 的样式类"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/input.html"
 value-option = []
 deprecated = false
@@ -7323,6 +7323,86 @@ value-option = []
 deprecated = true
 
 [[component.property]]
+name = "bindscrollstart"
+ty = ""
+description = "建议使用 `bind:scrollstart` 代替"
+reference = "https://developers.weixin.qq.com/miniprogram/dev/component/scroll-view.html"
+value-option = []
+deprecated = true
+
+[[component.property]]
+name = "catchscrollstart"
+ty = ""
+description = "建议使用 `catch:scrollstart` 代替"
+reference = "https://developers.weixin.qq.com/miniprogram/dev/component/scroll-view.html"
+value-option = []
+deprecated = true
+
+[[component.property]]
+name = "bindscroll"
+ty = ""
+description = "建议使用 `bind:scroll` 代替"
+reference = "https://developers.weixin.qq.com/miniprogram/dev/component/scroll-view.html"
+value-option = []
+deprecated = true
+
+[[component.property]]
+name = "catchscroll"
+ty = ""
+description = "建议使用 `catch:scroll` 代替"
+reference = "https://developers.weixin.qq.com/miniprogram/dev/component/scroll-view.html"
+value-option = []
+deprecated = true
+
+[[component.property]]
+name = "bindscrollend"
+ty = ""
+description = "建议使用 `bind:scrollend` 代替"
+reference = "https://developers.weixin.qq.com/miniprogram/dev/component/scroll-view.html"
+value-option = []
+deprecated = true
+
+[[component.property]]
+name = "catchscrollend"
+ty = ""
+description = "建议使用 `catch:scrollend` 代替"
+reference = "https://developers.weixin.qq.com/miniprogram/dev/component/scroll-view.html"
+value-option = []
+deprecated = true
+
+[[component.property]]
+name = "bindrefresherwillrefresh"
+ty = ""
+description = "建议使用 `bind:refresherwillrefresh` 代替"
+reference = "https://developers.weixin.qq.com/miniprogram/dev/component/scroll-view.html"
+value-option = []
+deprecated = true
+
+[[component.property]]
+name = "catchrefresherwillrefresh"
+ty = ""
+description = "建议使用 `catch:refresherwillrefresh` 代替"
+reference = "https://developers.weixin.qq.com/miniprogram/dev/component/scroll-view.html"
+value-option = []
+deprecated = true
+
+[[component.property]]
+name = "bindrefresherstatuschange"
+ty = ""
+description = "建议使用 `bind:refresherstatuschange` 代替"
+reference = "https://developers.weixin.qq.com/miniprogram/dev/component/scroll-view.html"
+value-option = []
+deprecated = true
+
+[[component.property]]
+name = "catchrefresherstatuschange"
+ty = ""
+description = "建议使用 `catch:refresherstatuschange` 代替"
+reference = "https://developers.weixin.qq.com/miniprogram/dev/component/scroll-view.html"
+value-option = []
+deprecated = true
+
+[[component.property]]
 name = "binddragstart"
 ty = ""
 description = "建议使用 `bind:dragstart` 代替"
@@ -7482,146 +7562,6 @@ reference = "https://developers.weixin.qq.com/miniprogram/dev/component/scroll-v
 value-option = []
 deprecated = true
 
-[[component.property]]
-name = "bindscrollstart"
-ty = ""
-description = "建议使用 `bind:scrollstart` 代替"
-reference = "https://developers.weixin.qq.com/miniprogram/dev/component/scroll-view.html"
-value-option = []
-deprecated = true
-
-[[component.property]]
-name = "catchscrollstart"
-ty = ""
-description = "建议使用 `catch:scrollstart` 代替"
-reference = "https://developers.weixin.qq.com/miniprogram/dev/component/scroll-view.html"
-value-option = []
-deprecated = true
-
-[[component.property]]
-name = "bindscroll"
-ty = ""
-description = "建议使用 `bind:scroll` 代替"
-reference = "https://developers.weixin.qq.com/miniprogram/dev/component/scroll-view.html"
-value-option = []
-deprecated = true
-
-[[component.property]]
-name = "catchscroll"
-ty = ""
-description = "建议使用 `catch:scroll` 代替"
-reference = "https://developers.weixin.qq.com/miniprogram/dev/component/scroll-view.html"
-value-option = []
-deprecated = true
-
-[[component.property]]
-name = "bindscrollend"
-ty = ""
-description = "建议使用 `bind:scrollend` 代替"
-reference = "https://developers.weixin.qq.com/miniprogram/dev/component/scroll-view.html"
-value-option = []
-deprecated = true
-
-[[component.property]]
-name = "catchscrollend"
-ty = ""
-description = "建议使用 `catch:scrollend` 代替"
-reference = "https://developers.weixin.qq.com/miniprogram/dev/component/scroll-view.html"
-value-option = []
-deprecated = true
-
-[[component.property]]
-name = "bindrefresherwillrefresh"
-ty = ""
-description = "建议使用 `bind:refresherwillrefresh` 代替"
-reference = "https://developers.weixin.qq.com/miniprogram/dev/component/scroll-view.html"
-value-option = []
-deprecated = true
-
-[[component.property]]
-name = "catchrefresherwillrefresh"
-ty = ""
-description = "建议使用 `catch:refresherwillrefresh` 代替"
-reference = "https://developers.weixin.qq.com/miniprogram/dev/component/scroll-view.html"
-value-option = []
-deprecated = true
-
-[[component.property]]
-name = "bindrefresherstatuschange"
-ty = ""
-description = "建议使用 `bind:refresherstatuschange` 代替"
-reference = "https://developers.weixin.qq.com/miniprogram/dev/component/scroll-view.html"
-value-option = []
-deprecated = true
-
-[[component.property]]
-name = "catchrefresherstatuschange"
-ty = ""
-description = "建议使用 `catch:refresherstatuschange` 代替"
-reference = "https://developers.weixin.qq.com/miniprogram/dev/component/scroll-view.html"
-value-option = []
-deprecated = true
-
-[[component.event]]
-name = "dragstart"
-description = "滑动开始事件 (同时开启 enhanced 属性后生效) detail { scrollTop, scrollLeft }"
-reference = "https://developers.weixin.qq.com/miniprogram/dev/component/scroll-view.html"
-deprecated = false
-
-[[component.event]]
-name = "dragging"
-description = "滑动事件 (同时开启 enhanced 属性后生效) detail { scrollTop, scrollLeft }"
-reference = "https://developers.weixin.qq.com/miniprogram/dev/component/scroll-view.html"
-deprecated = false
-
-[[component.event]]
-name = "dragend"
-description = "滑动结束事件 (同时开启 enhanced 属性后生效) detail { scrollTop, scrollLeft, velocity }"
-reference = "https://developers.weixin.qq.com/miniprogram/dev/component/scroll-view.html"
-deprecated = false
-
-[[component.event]]
-name = "scrolltoupper"
-description = "滚动到顶部/左边时触发"
-reference = "https://developers.weixin.qq.com/miniprogram/dev/component/scroll-view.html"
-deprecated = false
-
-[[component.event]]
-name = "scrolltolower"
-description = "滚动到底部/右边时触发"
-reference = "https://developers.weixin.qq.com/miniprogram/dev/component/scroll-view.html"
-deprecated = false
-
-[[component.event]]
-name = "scroll"
-description = "滚动时触发，event.detail = { scrollLeft, scrollTop, scrollHeight, scrollWidth, deltaX, deltaY }。skyline 从 3.6.6开始，额外具有 boundaryVelocity 字段：如果该次滚动会触碰到边界，从该次滚动触发起到下一个滚动事件发生或者当次滚动事件结束为止 boundaryVelocity 将被置为触碰边界时的速度，否则置为 NAN。"
-reference = "https://developers.weixin.qq.com/miniprogram/dev/component/scroll-view.html"
-deprecated = false
-
-[[component.event]]
-name = "refresherpulling"
-description = "自定义下拉刷新控件被下拉"
-reference = "https://developers.weixin.qq.com/miniprogram/dev/component/scroll-view.html"
-deprecated = false
-
-[[component.event]]
-name = "refresherrefresh"
-description = "自定义下拉刷新被触发"
-reference = "https://developers.weixin.qq.com/miniprogram/dev/component/scroll-view.html"
-deprecated = false
-
-[[component.event]]
-name = "refresherrestore"
-description = "自定义下拉刷新被复位"
-reference = "https://developers.weixin.qq.com/miniprogram/dev/component/scroll-view.html"
-deprecated = false
-
-[[component.event]]
-name = "refresherabort"
-description = "自定义下拉刷新被中止"
-reference = "https://developers.weixin.qq.com/miniprogram/dev/component/scroll-view.html"
-deprecated = false
-
 [[component.event]]
 name = "dragstart"
 description = "滑动开始事件 (同时开启 enhanced 属性后生效) detail { scrollTop, scrollLeft }"
@@ -7709,6 +7649,66 @@ deprecated = false
 [[component.event]]
 name = "refresherstatuschange"
 description = "下拉刷新状态回调"
+reference = "https://developers.weixin.qq.com/miniprogram/dev/component/scroll-view.html"
+deprecated = false
+
+[[component.event]]
+name = "dragstart"
+description = "滑动开始事件 (同时开启 enhanced 属性后生效) detail { scrollTop, scrollLeft }"
+reference = "https://developers.weixin.qq.com/miniprogram/dev/component/scroll-view.html"
+deprecated = false
+
+[[component.event]]
+name = "dragging"
+description = "滑动事件 (同时开启 enhanced 属性后生效) detail { scrollTop, scrollLeft }"
+reference = "https://developers.weixin.qq.com/miniprogram/dev/component/scroll-view.html"
+deprecated = false
+
+[[component.event]]
+name = "dragend"
+description = "滑动结束事件 (同时开启 enhanced 属性后生效) detail { scrollTop, scrollLeft, velocity }"
+reference = "https://developers.weixin.qq.com/miniprogram/dev/component/scroll-view.html"
+deprecated = false
+
+[[component.event]]
+name = "scrolltoupper"
+description = "滚动到顶部/左边时触发"
+reference = "https://developers.weixin.qq.com/miniprogram/dev/component/scroll-view.html"
+deprecated = false
+
+[[component.event]]
+name = "scrolltolower"
+description = "滚动到底部/右边时触发"
+reference = "https://developers.weixin.qq.com/miniprogram/dev/component/scroll-view.html"
+deprecated = false
+
+[[component.event]]
+name = "scroll"
+description = "滚动时触发，event.detail = { scrollLeft, scrollTop, scrollHeight, scrollWidth, deltaX, deltaY }。skyline 从 3.6.6开始，额外具有 boundaryVelocity 字段：如果该次滚动会触碰到边界，从该次滚动触发起到下一个滚动事件发生或者当次滚动事件结束为止 boundaryVelocity 将被置为触碰边界时的速度，否则置为 NAN。"
+reference = "https://developers.weixin.qq.com/miniprogram/dev/component/scroll-view.html"
+deprecated = false
+
+[[component.event]]
+name = "refresherpulling"
+description = "自定义下拉刷新控件被下拉"
+reference = "https://developers.weixin.qq.com/miniprogram/dev/component/scroll-view.html"
+deprecated = false
+
+[[component.event]]
+name = "refresherrefresh"
+description = "自定义下拉刷新被触发"
+reference = "https://developers.weixin.qq.com/miniprogram/dev/component/scroll-view.html"
+deprecated = false
+
+[[component.event]]
+name = "refresherrestore"
+description = "自定义下拉刷新被复位"
+reference = "https://developers.weixin.qq.com/miniprogram/dev/component/scroll-view.html"
+deprecated = false
+
+[[component.event]]
+name = "refresherabort"
+description = "自定义下拉刷新被中止"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/scroll-view.html"
 deprecated = false
 
@@ -8610,14 +8610,6 @@ description = "只允许负向滑动，vertical 为 true 时，表示向上滑�
 deprecated = false
 
 [[component.property]]
-name = "snap-to-edge"
-ty = "boolean"
-description = "当 swiper-item 的个数大于等于 2，关闭 circular 并且开启 previous-margin 或 next-margin 的时候，可以指定这个边距是否应用到第一个、最后一个元素"
-reference = "https://developers.weixin.qq.com/miniprogram/dev/component/swiper.html"
-value-option = []
-deprecated = false
-
-[[component.property]]
 name = "layout-type"
 ty = "string"
 description = "渲染模式"
@@ -8865,6 +8857,14 @@ deprecated = false
 name = "worklet:onscrollend"
 ty = "string"
 description = "滑动结束时触发，仅支持 worklet 作为回调。event.detail = {dx: dx, dy: dy}"
+reference = "https://developers.weixin.qq.com/miniprogram/dev/component/swiper.html"
+value-option = []
+deprecated = false
+
+[[component.property]]
+name = "snap-to-edge"
+ty = "boolean"
+description = "当 swiper-item 的个数大于等于 2，关闭 circular 并且开启 previous-margin 或 next-margin 的时候，可以指定这个边距是否应用到第一个、最后一个元素"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/swiper.html"
 value-option = []
 deprecated = false
