@@ -2258,6 +2258,14 @@ value-option = []
 deprecated = false
 
 [[component.property]]
+name = "fade-in"
+ty = "boolean"
+description = "是否渐显"
+reference = "https://developers.weixin.qq.com/miniprogram/dev/component/image.html"
+value-option = []
+deprecated = false
+
+[[component.property]]
 name = "webp"
 ty = "boolean"
 description = "默认不解析 webP 格式，只支持网络资源"
@@ -2277,14 +2285,6 @@ deprecated = false
 name = "forceHttps"
 ty = "boolean"
 description = "自动将 http 链接替换为 https 链接"
-reference = "https://developers.weixin.qq.com/miniprogram/dev/component/image.html"
-value-option = []
-deprecated = false
-
-[[component.property]]
-name = "fade-in"
-ty = "boolean"
-description = "是否渐显"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/image.html"
 value-option = []
 deprecated = false
@@ -6136,22 +6136,6 @@ value-option = []
 deprecated = true
 
 [[component.property]]
-name = "bindresize"
-ty = ""
-description = "建议使用 `bind:resize` 代替"
-reference = "https://developers.weixin.qq.com/miniprogram/dev/component/page-meta.html"
-value-option = []
-deprecated = true
-
-[[component.property]]
-name = "catchresize"
-ty = ""
-description = "建议使用 `catch:resize` 代替"
-reference = "https://developers.weixin.qq.com/miniprogram/dev/component/page-meta.html"
-value-option = []
-deprecated = true
-
-[[component.property]]
 name = "bindscroll"
 ty = ""
 description = "建议使用 `bind:scroll` 代替"
@@ -6183,11 +6167,21 @@ reference = "https://developers.weixin.qq.com/miniprogram/dev/component/page-met
 value-option = []
 deprecated = true
 
-[[component.event]]
-name = "resize"
-description = "页面尺寸变化时会触发 `resize` 事件， `event.detail = { size: { windowWidth, windowHeight } }`"
+[[component.property]]
+name = "bindresize"
+ty = ""
+description = "建议使用 `bind:resize` 代替"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/page-meta.html"
-deprecated = false
+value-option = []
+deprecated = true
+
+[[component.property]]
+name = "catchresize"
+ty = ""
+description = "建议使用 `catch:resize` 代替"
+reference = "https://developers.weixin.qq.com/miniprogram/dev/component/page-meta.html"
+value-option = []
+deprecated = true
 
 [[component.event]]
 name = "resize"
@@ -6204,6 +6198,12 @@ deprecated = false
 [[component.event]]
 name = "scrolldone"
 description = "如果通过改变 `scroll-top` 属性来使页面滚动，页面滚动结束后会触发 `scrolldone` 事件"
+reference = "https://developers.weixin.qq.com/miniprogram/dev/component/page-meta.html"
+deprecated = false
+
+[[component.event]]
+name = "resize"
+description = "页面尺寸变化时会触发 `resize` 事件， `event.detail = { size: { windowWidth, windowHeight } }`"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/page-meta.html"
 deprecated = false
 
@@ -6924,38 +6924,6 @@ value-option = []
 deprecated = false
 
 [[component.property]]
-name = "enable-flex"
-ty = "boolean"
-description = "启用 flexbox 布局。开启后，当前节点声明了 `display: flex` 就会成为 flex container，并作用于其孩子节点。"
-reference = "https://developers.weixin.qq.com/miniprogram/dev/component/scroll-view.html"
-value-option = []
-deprecated = false
-
-[[component.property]]
-name = "enhanced"
-ty = "boolean"
-description = "启用 scroll-view 增强特性，启用后可通过 [ScrollViewContext](https://developers.weixin.qq.com/miniprogram/dev/api/ui/scroll/ScrollViewContext.html) 操作 scroll-view。鸿蒙 OS 暂不支持 enhanced 及其相关的属性和方法。"
-reference = "https://developers.weixin.qq.com/miniprogram/dev/component/scroll-view.html"
-value-option = []
-deprecated = false
-
-[[component.property]]
-name = "paging-enabled"
-ty = "boolean"
-description = "分页滑动效果 (同时开启 enhanced 属性后生效)"
-reference = "https://developers.weixin.qq.com/miniprogram/dev/component/scroll-view.html"
-value-option = []
-deprecated = false
-
-[[component.property]]
-name = "using-sticky"
-ty = "boolean"
-description = "使 scroll-view 下的 position sticky 特性生效，否则滚动一屏后 sticky 元素会被隐藏"
-reference = "https://developers.weixin.qq.com/miniprogram/dev/component/scroll-view.html"
-value-option = []
-deprecated = false
-
-[[component.property]]
 name = "type"
 ty = "string"
 description = "渲染模式"
@@ -7158,6 +7126,38 @@ deprecated = false
 name = "refresher-two-level-pinned"
 ty = "boolean"
 description = "即将打开二级时否定住"
+reference = "https://developers.weixin.qq.com/miniprogram/dev/component/scroll-view.html"
+value-option = []
+deprecated = false
+
+[[component.property]]
+name = "enable-flex"
+ty = "boolean"
+description = "启用 flexbox 布局。开启后，当前节点声明了 `display: flex` 就会成为 flex container，并作用于其孩子节点。"
+reference = "https://developers.weixin.qq.com/miniprogram/dev/component/scroll-view.html"
+value-option = []
+deprecated = false
+
+[[component.property]]
+name = "enhanced"
+ty = "boolean"
+description = "启用 scroll-view 增强特性，启用后可通过 [ScrollViewContext](https://developers.weixin.qq.com/miniprogram/dev/api/ui/scroll/ScrollViewContext.html) 操作 scroll-view。鸿蒙 OS 暂不支持 enhanced 及其相关的属性和方法。"
+reference = "https://developers.weixin.qq.com/miniprogram/dev/component/scroll-view.html"
+value-option = []
+deprecated = false
+
+[[component.property]]
+name = "paging-enabled"
+ty = "boolean"
+description = "分页滑动效果 (同时开启 enhanced 属性后生效)"
+reference = "https://developers.weixin.qq.com/miniprogram/dev/component/scroll-view.html"
+value-option = []
+deprecated = false
+
+[[component.property]]
+name = "using-sticky"
+ty = "boolean"
+description = "使 scroll-view 下的 position sticky 特性生效，否则滚动一屏后 sticky 元素会被隐藏"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/scroll-view.html"
 value-option = []
 deprecated = false
@@ -9481,70 +9481,6 @@ value-option = []
 deprecated = true
 
 [[component.property]]
-name = "bindselectionchange"
-ty = ""
-description = "建议使用 `bind:selectionchange` 代替"
-reference = "https://developers.weixin.qq.com/miniprogram/dev/component/textarea.html"
-value-option = []
-deprecated = true
-
-[[component.property]]
-name = "catchselectionchange"
-ty = ""
-description = "建议使用 `catch:selectionchange` 代替"
-reference = "https://developers.weixin.qq.com/miniprogram/dev/component/textarea.html"
-value-option = []
-deprecated = true
-
-[[component.property]]
-name = "bindkeyboardcompositionstart"
-ty = ""
-description = "建议使用 `bind:keyboardcompositionstart` 代替"
-reference = "https://developers.weixin.qq.com/miniprogram/dev/component/textarea.html"
-value-option = []
-deprecated = true
-
-[[component.property]]
-name = "catchkeyboardcompositionstart"
-ty = ""
-description = "建议使用 `catch:keyboardcompositionstart` 代替"
-reference = "https://developers.weixin.qq.com/miniprogram/dev/component/textarea.html"
-value-option = []
-deprecated = true
-
-[[component.property]]
-name = "bindkeyboardcompositionupdate"
-ty = ""
-description = "建议使用 `bind:keyboardcompositionupdate` 代替"
-reference = "https://developers.weixin.qq.com/miniprogram/dev/component/textarea.html"
-value-option = []
-deprecated = true
-
-[[component.property]]
-name = "catchkeyboardcompositionupdate"
-ty = ""
-description = "建议使用 `catch:keyboardcompositionupdate` 代替"
-reference = "https://developers.weixin.qq.com/miniprogram/dev/component/textarea.html"
-value-option = []
-deprecated = true
-
-[[component.property]]
-name = "bindkeyboardcompositionend"
-ty = ""
-description = "建议使用 `bind:keyboardcompositionend` 代替"
-reference = "https://developers.weixin.qq.com/miniprogram/dev/component/textarea.html"
-value-option = []
-deprecated = true
-
-[[component.property]]
-name = "catchkeyboardcompositionend"
-ty = ""
-description = "建议使用 `catch:keyboardcompositionend` 代替"
-reference = "https://developers.weixin.qq.com/miniprogram/dev/component/textarea.html"
-value-option = []
-deprecated = true
-
-[[component.property]]
 name = "bindfocus"
 ty = ""
 description = "建议使用 `bind:focus` 代替"
@@ -9640,6 +9576,106 @@ reference = "https://developers.weixin.qq.com/miniprogram/dev/component/textarea
 value-option = []
 deprecated = true
 
+[[component.property]]
+name = "bindselectionchange"
+ty = ""
+description = "建议使用 `bind:selectionchange` 代替"
+reference = "https://developers.weixin.qq.com/miniprogram/dev/component/textarea.html"
+value-option = []
+deprecated = true
+
+[[component.property]]
+name = "catchselectionchange"
+ty = ""
+description = "建议使用 `catch:selectionchange` 代替"
+reference = "https://developers.weixin.qq.com/miniprogram/dev/component/textarea.html"
+value-option = []
+deprecated = true
+
+[[component.property]]
+name = "bindkeyboardcompositionstart"
+ty = ""
+description = "建议使用 `bind:keyboardcompositionstart` 代替"
+reference = "https://developers.weixin.qq.com/miniprogram/dev/component/textarea.html"
+value-option = []
+deprecated = true
+
+[[component.property]]
+name = "catchkeyboardcompositionstart"
+ty = ""
+description = "建议使用 `catch:keyboardcompositionstart` 代替"
+reference = "https://developers.weixin.qq.com/miniprogram/dev/component/textarea.html"
+value-option = []
+deprecated = true
+
+[[component.property]]
+name = "bindkeyboardcompositionupdate"
+ty = ""
+description = "建议使用 `bind:keyboardcompositionupdate` 代替"
+reference = "https://developers.weixin.qq.com/miniprogram/dev/component/textarea.html"
+value-option = []
+deprecated = true
+
+[[component.property]]
+name = "catchkeyboardcompositionupdate"
+ty = ""
+description = "建议使用 `catch:keyboardcompositionupdate` 代替"
+reference = "https://developers.weixin.qq.com/miniprogram/dev/component/textarea.html"
+value-option = []
+deprecated = true
+
+[[component.property]]
+name = "bindkeyboardcompositionend"
+ty = ""
+description = "建议使用 `bind:keyboardcompositionend` 代替"
+reference = "https://developers.weixin.qq.com/miniprogram/dev/component/textarea.html"
+value-option = []
+deprecated = true
+
+[[component.property]]
+name = "catchkeyboardcompositionend"
+ty = ""
+description = "建议使用 `catch:keyboardcompositionend` 代替"
+reference = "https://developers.weixin.qq.com/miniprogram/dev/component/textarea.html"
+value-option = []
+deprecated = true
+
+[[component.event]]
+name = "focus"
+description = "输入框聚焦时触发，event.detail = { value, height }，height 为键盘高度，在基础库 1.9.90 起支持"
+reference = "https://developers.weixin.qq.com/miniprogram/dev/component/textarea.html"
+deprecated = false
+
+[[component.event]]
+name = "blur"
+description = "输入框失去焦点时触发，event.detail = {value, cursor}"
+reference = "https://developers.weixin.qq.com/miniprogram/dev/component/textarea.html"
+deprecated = false
+
+[[component.event]]
+name = "linechange"
+description = "输入框行数变化时调用，event.detail = {height: 0, heightRpx: 0, lineCount: 0}"
+reference = "https://developers.weixin.qq.com/miniprogram/dev/component/textarea.html"
+deprecated = false
+
+[[component.event]]
+name = "input"
+description = "当键盘输入时，触发 input 事件，event.detail = {value, cursor, keyCode}，keyCode 为键值，目前工具还不支持返回keyCode参数。**bindinput 处理函数的返回值并不会反映到 textarea 上**"
+reference = "https://developers.weixin.qq.com/miniprogram/dev/component/textarea.html"
+deprecated = false
+
+[[component.event]]
+name = "confirm"
+description = "点击完成时， 触发 confirm 事件，event.detail = {value: value}"
+reference = "https://developers.weixin.qq.com/miniprogram/dev/component/textarea.html"
+deprecated = false
+
+[[component.event]]
+name = "keyboardheightchange"
+description = "键盘高度发生变化的时候触发此事件，event.detail = {height: height, duration: duration}"
+reference = "https://developers.weixin.qq.com/miniprogram/dev/component/textarea.html"
+deprecated = false
+
 [[component.event]]
 name = "focus"
 description = "输入框聚焦时触发，event.detail = { value, height }，height 为键盘高度，在基础库 1.9.90 起支持"
@@ -9697,42 +9733,6 @@ deprecated = false
 [[component.event]]
 name = "keyboardcompositionend"
 description = "输入法输入结束时触发（仅当输入法支持时触发）"
-reference = "https://developers.weixin.qq.com/miniprogram/dev/component/textarea.html"
-deprecated = false
-
-[[component.event]]
-name = "focus"
-description = "输入框聚焦时触发，event.detail = { value, height }，height 为键盘高度，在基础库 1.9.90 起支持"
-reference = "https://developers.weixin.qq.com/miniprogram/dev/component/textarea.html"
-deprecated = false
-
-[[component.event]]
-name = "blur"
-description = "输入框失去焦点时触发，event.detail = {value, cursor}"
-reference = "https://developers.weixin.qq.com/miniprogram/dev/component/textarea.html"
-deprecated = false
-
-[[component.event]]
-name = "linechange"
-description = "输入框行数变化时调用，event.detail = {height: 0, heightRpx: 0, lineCount: 0}"
-reference = "https://developers.weixin.qq.com/miniprogram/dev/component/textarea.html"
-deprecated = false
-
-[[component.event]]
-name = "input"
-description = "当键盘输入时，触发 input 事件，event.detail = {value, cursor, keyCode}，keyCode 为键值，目前工具还不支持返回keyCode参数。**bindinput 处理函数的返回值并不会反映到 textarea 上**"
-reference = "https://developers.weixin.qq.com/miniprogram/dev/component/textarea.html"
-deprecated = false
-
-[[component.event]]
-name = "confirm"
-description = "点击完成时， 触发 confirm 事件，event.detail = {value: value}"
-reference = "https://developers.weixin.qq.com/miniprogram/dev/component/textarea.html"
-deprecated = false
-
-[[component.event]]
-name = "keyboardheightchange"
-description = "键盘高度发生变化的时候触发此事件，event.detail = {height: height, duration: duration}"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/textarea.html"
 deprecated = false
 
