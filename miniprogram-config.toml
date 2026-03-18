@@ -2642,17 +2642,17 @@ value-option = []
 deprecated = false
 
 [[component.property]]
-name = "placeholder-class"
+name = "worklet:onkeyboardheightchange"
 ty = "string"
-description = "指定 placeholder 的样式类"
+description = "键盘高度变化时触发。event.detail = {height: height, pageBottomPadding: pageBottomPadding}； height: 键盘高度，pageBottomPadding: 页面上推高度"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/input.html"
 value-option = []
 deprecated = false
 
 [[component.property]]
-name = "worklet:onkeyboardheightchange"
+name = "placeholder-class"
 ty = "string"
-description = "键盘高度变化时触发。event.detail = {height: height, pageBottomPadding: pageBottomPadding}； height: 键盘高度，pageBottomPadding: 页面上推高度"
+description = "指定 placeholder 的样式类"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/input.html"
 value-option = []
 deprecated = false
@@ -8610,6 +8610,14 @@ description = "只允许负向滑动，vertical 为 true 时，表示向上滑�
 deprecated = false
 
 [[component.property]]
+name = "snap-to-edge"
+ty = "boolean"
+description = "当 swiper-item 的个数大于等于 2，关闭 circular 并且开启 previous-margin 或 next-margin 的时候，可以指定这个边距是否应用到第一个、最后一个元素"
+reference = "https://developers.weixin.qq.com/miniprogram/dev/component/swiper.html"
+value-option = []
+deprecated = false
+
+[[component.property]]
 name = "layout-type"
 ty = "string"
 description = "渲染模式"
@@ -8857,14 +8865,6 @@ deprecated = false
 name = "worklet:onscrollend"
 ty = "string"
 description = "滑动结束时触发，仅支持 worklet 作为回调。event.detail = {dx: dx, dy: dy}"
-reference = "https://developers.weixin.qq.com/miniprogram/dev/component/swiper.html"
-value-option = []
-deprecated = false
-
-[[component.property]]
-name = "snap-to-edge"
-ty = "boolean"
-description = "当 swiper-item 的个数大于等于 2，关闭 circular 并且开启 previous-margin 或 next-margin 的时候，可以指定这个边距是否应用到第一个、最后一个元素"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/swiper.html"
 value-option = []
 deprecated = false
