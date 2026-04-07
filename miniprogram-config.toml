@@ -7666,13 +7666,13 @@ deprecated = false
 
 [[component.event]]
 name = "scroll"
-description = "滚动时触发，event.detail = { scrollLeft, scrollTop, scrollHeight, scrollWidth, deltaX, deltaY }。skyline 从 3.6.6开始，额外具有 boundaryVelocity 字段：如果该次滚动会触碰到边界，从该次滚动触发起到下一个滚动事件发生或者当次滚动事件结束为止 boundaryVelocity 将被置为触碰边界时的速度，否则置为 NAN。"
+description = "滚动事件，多返回 isDrag 字段，仅支持非 worklet 的组件方法作为回调。event.detail = { isDrag }"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/scroll-view.html"
 deprecated = false
 
 [[component.event]]
 name = "scroll"
-description = "滚动事件，多返回 isDrag 字段，仅支持非 worklet 的组件方法作为回调。event.detail = { isDrag }"
+description = "滚动时触发，event.detail = { scrollLeft, scrollTop, scrollHeight, scrollWidth, deltaX, deltaY }。skyline 从 3.6.6开始，额外具有 boundaryVelocity 字段：如果该次滚动会触碰到边界，从该次滚动触发起到下一个滚动事件发生或者当次滚动事件结束为止 boundaryVelocity 将被置为触碰边界时的速度，否则置为 NAN。"
 reference = "https://developers.weixin.qq.com/miniprogram/dev/component/scroll-view.html"
 deprecated = false
 
